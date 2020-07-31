@@ -2,7 +2,7 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
-  <base href="http://antoninocandido.fr/" />
+  <!--<base href="http://antoninocandido.fr/" />-->
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />	
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="antonino candido, antonino, candido, graphiste multimÃ©dia, graphiste, developpeur, developpeur multimedia, webdesigner, paca, toulon, paris" />
@@ -181,8 +181,8 @@
 							<h1 class="titre_h1">ActualitÃ©s</h1>
 						</div>
 					<?php /*
-					<p class="p_actus">Récemment diplomé d'une <strong>licence de Concepteur Réalisateur Web</strong> en alternance à <strong>EFFICOM Paris</strong>, mon objectif aujourd'hui est de décroché mon premier <strong>emploi en CDI</strong> dans le domaine du multimédia.
-					<br/><br/>En parallèle, je travaille en tant qu’<strong>auto-entrepreneur</strong> depuis près de 3 ans dans la création de sites internet.</p></p>
+					<p class="p_actus">Rï¿½cemment diplomï¿½ d'une <strong>licence de Concepteur Rï¿½alisateur Web</strong> en alternance ï¿½ <strong>EFFICOM Paris</strong>, mon objectif aujourd'hui est de dï¿½crochï¿½ mon premier <strong>emploi en CDI</strong> dans le domaine du multimï¿½dia.
+					<br/><br/>En parallï¿½le, je travaille en tant quï¿½<strong>auto-entrepreneur</strong> depuis prï¿½s de 3 ans dans la crï¿½ation de sites internet.</p></p>
 					*/
 					?>
 					<p class="p_actus">Je travaille en tant que Tech Lead chez <b><a href="http://voyageprive.com/" target="_blank">voyageprive.com</a></b>, depuis Mars 2017</p>
