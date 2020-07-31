@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://antoninocandido.fr/</loc>
+</url>
+<url>
+  <loc>http://antoninocandido.fr/index.php</loc>
+</url>
+<url>
+  <loc>http://antoninocandido.fr/portfolio.php</loc>
+</url>
+<url>
+  <loc>http://antoninocandido.fr/about.php</loc>
+</url>
+<url>
+  <loc>http://antoninocandido.fr/contact.php</loc>
+</url>
+<url>
+  <loc>http://antoninocandido.fr/projets/cv-antonino-candido.pdf</loc>
+  <lastmod>2012-01-23T21:31:31+00:00</lastmod>
+</url>
+<url>
+  <loc>http://antoninocandido.fr/portfolio.php?edition-limitee</loc>
+</url>
+<url>
+  <loc>http://antoninocandido.fr/portfolio.php?ferme-des-sonnailles</loc>
+</url>
+<url>
+  <loc>http://antoninocandido.fr/portfolio.php?domaine-saint-andree</loc>
+</url>
+</urlset>
