@@ -17,11 +17,13 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from webapp import views
+import webapp.views
 
 urlpatterns = [
-        url(r'^$', views.index),
-        url(r'^admin/', admin.site.urls),
+        url(r'^$', webapp.views.home, name='home'),
+        url(r'^portfolio$', webapp.views.portfolio, name='portfolio'),
+        url(r'^about$', webapp.views.about, name='about'),
+        url(r'^contact$', webapp.views.contact, name='contact'),
 ]
 
 if settings.DEBUG:
