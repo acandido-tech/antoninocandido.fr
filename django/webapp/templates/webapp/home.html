@@ -1,13 +1,14 @@
 {% extends 'webapp/base/common.html' %}
-
 {% block content %}
     {% load static %}
+    <link href="{% static 'webapp/css/home.css' %}" rel="stylesheet" />
+
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
-    <div class="container d-flex align-items-center flex-column">
+    
         <!-- Parallax view-->
         {% include 'webapp/home/parallaxSlider.html' %}
-    </div>
+    
     </header>
     <!-- Contact Section-->
     <section class="page-section" id="contact">
