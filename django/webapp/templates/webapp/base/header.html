@@ -9,11 +9,29 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto"> 
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger active" href="{% url 'home' %}">ACCUEIL</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="{% url 'portfolio' %}">PORTFOLIO</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="{% url 'about' %}">A PROPOS</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="{% url 'contact' %}">Contact</a></li>
+            <ul class="navbar-nav ml-auto text-uppercase">
+                {% with view_name=request.resolver_match.url_name %}
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="{% if view_name == 'home'%}active{% endif %} nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="{% url 'home' %}">
+                            accueil
+                        </a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="{% if view_name == 'portfolio'%}active{% endif %} nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="{% url 'portfolio' %}">
+                            portfolio
+                        </a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="{% if view_name == 'about'%}active{% endif %} nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="{% url 'about' %}">
+                            à propos
+                        </a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="{% if view_name == 'contact'%}active{% endif %} nav-link py-4 px-0 px-lg-4 rounded js-scroll-trigger" href="{% url 'contact' %}">
+                            contact
+                        </a>
+                    </li>
+                {% endwith %}
             </ul>
         </div>
     </div>
