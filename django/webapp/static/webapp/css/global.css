@@ -185,13 +185,12 @@ sup {
 }
 
 a {
-  color: #1abc9c;
+  color: #333;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #117964;
   text-decoration: underline;
 }
 
@@ -9793,7 +9792,7 @@ h3 {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 
 .page-section .page-section-heading {
@@ -10064,8 +10063,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 .footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 2rem 0;
   background-color: #242831;
   color: #666;
 }
