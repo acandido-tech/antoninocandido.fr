@@ -4,9 +4,9 @@ CONFIG = {
     "Home": {
         "js_list": [
             "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js",
-            static("webapp/js/jquery.color.js"),
+            static("webapp/js/external/jquery.color.js"),
             static("webapp/js/galerie.js"),
-            static("webapp/js/scripts.js"),
+            static("webapp/js/home.js"),
         ],
         "css_list": [],
     },
@@ -14,7 +14,7 @@ CONFIG = {
         "js_list": [
             "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js",
             "https://cdnjs.cloudflare.com/ajax/libs/coin-slider/1.0.0/coin-slider.min.js",
-            static("webapp/js/jquery.scrollTo.js"),
+            static("webapp/js/external/jquery.scrollTo.js"),
             static("webapp/js/effect.js"),
         ],
         "css_list": [],
