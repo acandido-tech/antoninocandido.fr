@@ -1,0 +1,317 @@
+/* CSS PORTFOLIO */
+
+.cont1 {
+    height: 30px;
+    width: 100%;
+    background-color: #242831
+}
+
+.cont2 {
+    height: 600px;
+    width: 100%;
+    background-color: #502831;
+    display: none
+}
+
+#contenu-client {
+    width: 980px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#thumb-portfolio {
+    height: 1100px;
+    background-color: #eee;
+}
+
+#container_portfolio_bg {
+    width: 980px;
+    margin: 0 auto;
+    padding: 35px 0 10px;
+}
+
+#div_titre_portfolio {
+    display: block;
+    margin: 0 auto;
+    border-bottom: 5px #d6d7cf solid;
+    padding-bottom: 10px;
+}
+
+#menu_portfolio {
+    float: left;
+    width: 270px
+}
+
+#container_thumbs_portfolio {
+    width: 700px;
+    float: right;
+}
+
+#container_thumbs_portfolio ul {
+    float: left;
+    clear: both;
+}
+
+#container_thumbs_portfolio ul li div p {
+    padding-top: 50px;
+}
+
+#container_thumbs_portfolio ul li div p.autre_1 {
+    padding-top: 42px;
+}
+
+#container_thumbs_portfolio ul li div p.autre_2 {
+    padding-top: 35px;
+}
+
+ul {
+    text-align: left;
+}
+
+ul.menu {
+    /*margin-left: .5em;
+	margin-bottom: 1em;*/
+    padding-left: 0;
+    /*width:180px;*/
+    float: left;
+
+
+}
+
+ul.menu li {
+    list-style-type: none;
+    /*display: inline-block;*/
+    padding: 2px 12px;
+    font-family: Calibri;
+    width: 114px;
+    text-align: center;
+    /*width:270px;*/
+}
+
+ul.menu li.selected {
+    /*-webkit-border-radius: 15px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		background: #242831;
+		-webkit-box-shadow: 1px 1px 0px #8c8c5d;*/
+    background: url(../assets/img/projets/fond-menu.png) no-repeat top left;
+}
+
+.selected a,
+.selected a:visited {
+
+    color: #999;
+}
+
+ul.item li {
+    list-style-type: none;
+    display: block;
+    float: left;
+    height: 155px;
+    cursor: pointer;
+    width: 220px;
+}
+
+ul.item li img {
+    border: 5px solid #FFF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 5px #ac987e;
+    -moz-box-shadow: 0px 0px 5px #ac987e;
+    box-shadow: 0px 0px 5px #ac987e;
+    width: 200px;
+    background-color: #000;
+
+
+}
+
+
+
+a,
+a:visited {
+    color: #161616;
+    text-decoration: none;
+}
+
+.info_cache {
+    margin: 5px 0 0 5px;
+    font-family: 'OSPDIN';
+    position: absolute;
+    width: 203px;
+    height: 136px;
+    background: url(../assets/img/info-projet-fond.png) no-repeat top left;
+    text-align: center;
+    color: #cccccc;
+    font-size: 18px;
+}
+
+.info_cache span {
+    color: #FFF;
+    font-size: 24px;
+}
+
+
+
+/*
+	CSS Galerie Coin Slider jQuery
+*/
+
+
+.coin-slider {
+    overflow: hidden;
+    zoom: 1;
+    position: relative;
+    margin: 24px 0 0 15px
+}
+
+.coin-slider a {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.cs-buttons {
+    font-size: 0px;
+    padding: 10px;
+    float: left;
+}
+
+.cs-buttons a {
+    margin: 25px 5px 0 0;
+    height: 14px;
+    width: 14px;
+    float: left;
+    background: url(../assets/img/projets/btn-galerie.png) no-repeat top left;
+    color: #B8C4CF;
+    text-indent: -1000px;
+}
+
+.cs-buttons a.cs-active {
+    background-position: bottom center;
+    color: #FFF;
+}
+
+.cs-title {
+    width: 545px;
+    padding: 10px;
+    background-color: #000;
+    color: #FFF;
+}
+
+.cs-prev,
+.cs-next {
+    background-color: #26324A;
+    color: #FFF !important;
+    padding: 0px 10px;
+}
+
+#galerie-client {
+    border: 2px #FFF solid;
+}
+
+/*
+		CSS des projets
+*/
+#div_titre_menu {
+    width: 980px;
+}
+
+#btn_nav {
+    float: right;
+    padding-top: 5px;
+}
+
+#btn_nav .projet-prev img,
+#btn_nav .projet-url img {
+    margin: -11px 11px 0 0;
+}
+
+#btn_nav .projet-next img {
+    margin: -11px 10px 0 0
+}
+
+#btn_nav #retour img {
+    margin-top: -11px;
+}
+
+.info-client {
+    width: 700px;
+    float: left;
+    height: 25px;
+    font-size: 15px
+}
+
+.info-client span {
+    font-weight: bold;
+}
+
+.contenair-client {
+    padding-top: 38px;
+    width: 980px;
+    height: 600px;
+    color: #26324a;
+    font-size: 14px;
+    font-family: Calibri;
+}
+
+#cont-gauche {
+    width: 390px;
+    float: left;
+    height: 500px;
+}
+
+#cont-gauche img {
+    margin-top: 26px;
+}
+
+#cont-gauche p {
+    line-height: 22px;
+    color: #333;
+}
+
+#my-work-title {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Calibri;
+    color: #26324a !important;
+}
+
+#cont-gauche ul li {
+    margin-top: 16px;
+    font-size: 16px;
+    font-family: Calibri;
+    color: #26324a;
+    font-style: italic;
+}
+
+#cont-gauche ul li span {
+    background-color: #FFF;
+    padding: 5px;
+}
+
+#cont-droite {
+    width: 590px;
+    float: left;
+    height: 500px;
+}
+
+.pxs_loading {
+    color: #FFF;
+    font-size: 20px;
+    padding: 15px 15px 15px 50px;
+    position: absolute;
+    background: #333 url(../assets/img/ajax-loader.gif) no-repeat 10px 50%;
+    opacity: 0.7;
+    width: 180px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.pxs_loading#portfolio {
+    display: none;
+}
+
+@import 'webapp/scss/home/parallax';

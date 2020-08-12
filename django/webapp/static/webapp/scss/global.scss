@@ -14,7 +14,7 @@
 
     .lead {
         color: #999;
-        font-family: Calibri,Times,serif;
+        font-family: Calibri, Times, serif;
         font-size: 0.8em;
         line-height: 1;
     }
@@ -37,14 +37,14 @@
             text-decoration: none
         }
 
-        p { 
-            margin-top:10px 
+        p {
+            margin-top: 10px
         }
     }
 
 
     .fond-cv:hover {
-        border:1px solid #FFF;
+        border: 1px solid #FFF;
     }
 
     .mb-0,
@@ -56,5 +56,11 @@
 }
 
 .copyright {
-  background-color: #1a252f;
+    background-color: #1a252f;
+}
+
+.titre_h1 {
+    font-family: 'OSPDIN';
+    font-size: 40px;
+    color: #333;
 }

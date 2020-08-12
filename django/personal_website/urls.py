@@ -20,14 +20,17 @@ from django.contrib import admin
 import webapp.views
 
 urlpatterns = [
-        url(r'^$', webapp.views.home, name='home'),
-        url(r'^portfolio$', webapp.views.portfolio, name='portfolio'),
-        url(r'^about$', webapp.views.about, name='about'),
-        url(r'^contact$', webapp.views.contact, name='contact'),
+    url(r"^$", webapp.views.home, name="home"),
+    url(r"^portfolio$", webapp.views.portfolio, name="portfolio"),
+    url(r"^about$", webapp.views.about, name="about"),
+    url(r"^contact$", webapp.views.contact, name="contact"),
+    url(
+        r"^projects/(?P<project_name>[a-z \-]+)/$", webapp.views.project, name="project"
+    ),
 ]
 
 if settings.DEBUG:
     import debug_toolbar
-    urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns
+
+    urlpatterns = [url(r"^__debug__/", include(debug_toolbar.urls)),] + urlpatterns
+
