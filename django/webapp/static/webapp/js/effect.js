@@ -1,4 +1,3 @@
-
 var couleur = '';
 
 $(document).ready(function () {
@@ -39,9 +38,16 @@ $(document).ready(function () {
 	var idprojet, substr, num_projet;
 	var vignettes = $('div.info_cache');
 
-	$(vignettes).stop().bind('click', function (e) { e.preventDefault(); Afficheprojet(this); });
+	$(vignettes).stop().bind('click', function (e) {
+		e.preventDefault();
+		displayProject(this);
+	});
 
-	function Afficheprojet(event) {
+	/**
+	 * 
+	 * @param {*} event 
+	 */
+	function displayProject(event) {
 
 		$(vignettes).css({ 'opacity': '0', 'cursor': 'pointer' });
 		$(event).css({ 'opacity': '0.9', 'cursor': 'default' });
@@ -95,26 +101,7 @@ $(document).ready(function () {
 		if (etat == '1') {
 			$('#contenu-client').animate({ opacity: 0 }, 800, function () {
 				$('#contenu-client').css({ 'display': 'none' });
-				$('#contenu-client').hide().load('projects/' + id.replace(/\/?#/, ""), function () {
-					var img_projet = $('#pxs_container img');
-					console.log(img_projet);
-					var nbr_img_projet = img_projet.length;
-					img_projet.load(function () {
-						nbr_img_projet--;
-						console.log(nbr_img_projet);
-						if (nbr_img_projet == 0) {
-							$('.pxs_loading').fadeOut(540, function () {
-								$('.pxs_container_projekt').css("background", couleur + " url(../projets/images/background/" + id + ".jpg) no-repeat top center");
-								$('#contenu-client').css({ 'display': 'block' });
-								$('.pxs_loading').remove();
-								$('<div class="action_js_galerie"><script type="text/javascript" src="webapp/js/galerie-client.js?sfgdata"></script></div>').insertAfter($('div#contenu-client .contenair-client'));
-								$('#contenu-client').animate({ opacity: 1 }, 940);
-							});
-						}
-					});
-
-
-				});
+				load_project(id);
 			});
 			return false;
 		}
@@ -122,34 +109,7 @@ $(document).ready(function () {
 		$('#contenu-client').css({ 'opacity': '0', 'display': 'none' });
 		$.scrollTo('body', 800, {});
 		$('#thumb-portfolio,#footer-cont').fadeOut("slow", function () {
-			$('#contenu-client').hide().load('projects/' + id.replace(/\/?#/, ""), function () {
-				if ($('#contenu-client').find("img").length > 0) {
-					var img_projet = $('#pxs_container img'),
-						nbr_img_projet = img_projet.length
-						;
-
-					img_projet.load(function () {
-						nbr_img_projet--;
-						if (nbr_img_projet == 0) {
-							$('.pxs_loading').fadeOut(540, function () {
-								console.log()
-								$('.pxs_container_projekt').css("background", couleur + " url(" + image_path + "/projets/background/" + id + ".jpg) no-repeat top center");
-								$('#contenu-client').css({ 'display': 'block' });
-								$('.pxs_loading').remove();
-								$('<div class="action_js_galerie"></div>').insertAfter($('div#contenu-client .contenair-client'));
-								$('#galerie-client').coinslider({
-									hoverPause: true
-								});
-
-								$('#contenu-client').animate({ opacity: 1 }, 940);
-								$('#thumb-portfolio,#footer-cont').fadeIn("slow");
-							});
-						}
-
-					});
-				}
-			});
-
+			load_project(id);
 		});
 		return false;
 	};
@@ -170,6 +130,37 @@ $(document).ready(function () {
 		recup_projet(idprojet, 1, galeriePos[0]);
 	};
 
+	/**
+	 * Load project into container
+	 * 
+	 * @param {*} project_id 
+	 */
+	function load_project(project_id) {
+		$('#contenu-client').hide().load('projects/' + project_id.replace(/\/?#/, ""), function () {
+			if ($('#contenu-client').find("img").length > 0) {
+				var img_projet = $('#pxs_container img'),
+					nbr_img_projet = img_projet.length
+					;
+
+				img_projet.load(function () {
+					nbr_img_projet--;
+					if (nbr_img_projet == 0) {
+						$('.pxs_loading').fadeOut(540, function () {
+							$('.pxs_container_projekt').css("background", couleur + " url(" + image_path + "/projets/background/" + project_id + ".jpg) no-repeat top center");
+							$('#contenu-client').css({ 'display': 'block' });
+							$('.pxs_loading').remove();
+							$('<div class="action_js_galerie"><script type="text/javascript" src="' + js_path + '/galerie-client.js"></script></div>').insertAfter($('div#contenu-client .contenair-client'));
+							$('#contenu-client').animate({ opacity: 1 }, 940);
+							$('#thumb-portfolio,#footer-cont').fadeIn("slow");
+						});
+					}
+
+				});
+			}
+		});
+
+	}
+
 	function getAbsolutePath() {
 		var currentURL = window.location.toString().split("/");
 		return currentURL[currentURL.length - 1].split("?");
@@ -179,7 +170,6 @@ $(document).ready(function () {
 	if (projetURL[1]) {
 		$('#' + projetURL[1]).click();
 	}
-
 
 	//SCRIPT ANIMATION VIGNETTE PORTFOLIO
 	$('.menu li a').stop().click(function (e) {
@@ -203,7 +193,6 @@ $(document).ready(function () {
 		}
 	});
 
-
 	$('.item li div.info_cache').hover(function () {
 		if (!$(this).is('.current')) {
 			$(this).stop().fadeTo("fast", 0.9);
@@ -213,17 +202,12 @@ $(document).ready(function () {
 			$(this).stop().fadeTo("fast", 0);
 		}
 	});
-
-
-
-
 });
 
 function couleur_fond(id) {
 	var couleurs_fond = ["#a6a6a7", "#68b2e2", "#acba91", "#afc5ce", "#c8c9ca", "#c8c9ca", "#81cdef", "#a8c1ba", "#c8c9ca", "#c8c9ca", "#c8c9ca", "#c8c9ca", "#a8c1ba", "#a8c1ba", "#a8c1ba", "#a8c1ba", "#c8c9ca"];
 	return couleurs_fond[id];
 }
-
 
 /*
  CODE GOOGLE MAP
@@ -251,8 +235,6 @@ function initialiser() {
 			stylers: [{ hue: "#242831" }, { lightness: 40 }, { saturation: -100 }]
 		}, {
 		}
-
-
 	];
 
 	var customMapStyle = new google.maps.StyledMapType(styleArray, { name: "Antonino Candido" });

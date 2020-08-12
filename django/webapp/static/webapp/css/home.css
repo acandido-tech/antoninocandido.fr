@@ -19,6 +19,29 @@
   border-top: 1px solid #999999;
 }
 
+.pxs_navigation span {
+  width: 100px;
+  height: 515px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  cursor: pointer;
+}
+
+.pxs_navigation span:hover {
+  opacity: 0.2;
+  filter: alpha(opacity=0.2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+}
+
+.pxs_navigation span.pxs_prev {
+  background: #333 url(../assets/img/prev.png) no-repeat center center;
+}
+
+.pxs_navigation span.pxs_next {
+  background: #333 url(../assets/img/next.png) no-repeat center center;
+}
+
 .background-project {
   width: 100%;
   height: 600px;
@@ -250,7 +273,7 @@ ul.pxs_thumbnails li.selected img {
   color: #FFF;
   font-size: 16px;
   text-decoration: none;
-  Font-family: Calibri,Verdana, Ariel, sans-serif;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
   text-align: center;
   cursor: pointer;
   display: block;
@@ -280,7 +303,7 @@ ul.pxs_thumbnails li.selected img {
   color: #FFF;
   font-size: 16px;
   text-decoration: none;
-  Font-family: Calibri,Verdana, Ariel, sans-serif;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
   text-align: center;
   cursor: pointer;
 }
@@ -308,7 +331,7 @@ ul.pxs_thumbnails li.selected img {
   color: #FFF;
   font-size: 16px;
   text-decoration: none;
-  Font-family: Calibri,Verdana, Ariel, sans-serif;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
   text-align: center;
   cursor: pointer;
   display: block;
@@ -328,7 +351,7 @@ ul.pxs_thumbnails li.selected img {
   color: #FFF;
   font-size: 16px;
   text-decoration: none;
-  Font-family: Calibri,Verdana, Ariel, sans-serif;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
   text-align: center;
   cursor: pointer;
 }

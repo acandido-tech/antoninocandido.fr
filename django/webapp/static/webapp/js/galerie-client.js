@@ -26,4 +26,8 @@ $(document).ready(function () {
 			exec++;
 		}
 	});
+
+	$('#galerie-client').coinslider({
+		hoverPause: true
+	});
 });
