@@ -20,12 +20,14 @@ from django.contrib import admin
 import webapp.views
 
 urlpatterns = [
-    url(r"^$", webapp.views.home, name="home"),
-    url(r"^portfolio$", webapp.views.portfolio, name="portfolio"),
-    url(r"^about$", webapp.views.about, name="about"),
-    url(r"^contact$", webapp.views.contact, name="contact"),
+    url(r"^$", webapp.views.HomeView.as_view(), name="home"),
+    url(r"^portfolio$", webapp.views.PortfolioView.as_view(), name="portfolio"),
+    url(r"^about$", webapp.views.AboutView.as_view(), name="about"),
+    url(r"^contact$", webapp.views.ContactView.as_view(), name="contact"),
     url(
-        r"^projects/(?P<project_name>[a-z \-]+)/$", webapp.views.project, name="project"
+        r"^projects/(?P<project_name>[a-z \-]+)/$",
+        webapp.views.ProjectView.as_view(),
+        name="project",
     ),
 ]
 

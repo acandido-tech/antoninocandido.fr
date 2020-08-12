@@ -44,15 +44,13 @@
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-    <script src="{% static 'webapp/js/jquery.color.js' %}"></script>
-    <script src="{% static 'webapp/js/jquery.scrollTo.js' %}"></script>
-    <script src="{% static 'webapp/js/coin-slider.min.js' %}"></script>
-    <script src="{% static 'webapp/js/effect.js' %}"></script>
-    <script src="{% static 'webapp/js/galerie.js' %}"></script>
-    <script src="{% static 'webapp/js/scripts.js' %}"></script>
+    {% if js_list %}
+    {% for js_path in js_list %}
+    <!-- dynamic insertion of related javascript dependencies view-->
+    <script src="{{js_path}}"></script>
+    {% endfor %}
+    {% endif %}
 
     <script type="text/javascript">
         var image_path = "{% static 'webapp/assets/img' %}";

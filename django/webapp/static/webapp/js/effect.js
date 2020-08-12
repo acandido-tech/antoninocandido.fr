@@ -1,30 +1,11 @@
 var couleur = '';
 
 $(document).ready(function () {
-
-	$("#hov-1").css("opacity", 0);
-	$("#hov-2").css("opacity", 0);
 	$('.item li div.info_cache').css("opacity", 0);
-
-	$("#hov-1").hover(function () {
-		$(this).stop().fadeTo("slow", 1.0); // This should set the opacity to 100% on hover
-	}, function () {
-		$(this).stop().fadeTo("slow", 0); // This should set the opacity back to 0% on mouseout
-	});
-
-	$("#hov-2").hover(function () {
-		$(this).stop().fadeTo("slow", 1.0); // This should set the opacity to 100% on hover
-	}, function () {
-		$(this).stop().fadeTo("slow", 0); // This should set the opacity back to 0% on mouseout
-	});
-
-
 	function reset_thumbs() {
 		$('div.info_cache').removeClass('current');
 		$('div.info_cache').css({ 'opacity': '0', 'cursor': 'pointer' });
 	}
-
-
 
 	var galeriePos = new Array;
 	var nbr_images = new Array;
