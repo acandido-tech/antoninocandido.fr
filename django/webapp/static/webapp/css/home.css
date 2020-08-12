@@ -371,24 +371,32 @@ CSS CONTAINER ACCUEIL
 .text-hover {
   position: absolute;
   z-index: 999;
-  width: 243px;
-  height: 138px;
-  border: 3px #acacac solid;
-  box-sizing: unset;
-}
-
-#div_image_projet_1 img.nb, #div_image_projet_2 img.nb {
+  width: 249px;
+  height: 144px;
   border: 3px #acacac solid;
 }
 
-#div_image_projet_1 .p_titre, #div_image_projet_2 .p_titre {
+.text-static {
+  width: 249px;
+  height: 144px;
+  border: 3px #acacac solid;
+}
+
+#div_image_projet_1 img.nb,
+#div_image_projet_2 img.nb {
+  border: 3px #acacac solid;
+}
+
+#div_image_projet_1 .p_titre,
+#div_image_projet_2 .p_titre {
   padding-top: 12px;
   font-size: 18px;
   font-weight: bold;
   color: #333;
 }
 
-#div_image_projet_1 .p_descr, #div_image_projet_2 .p_descr {
+#div_image_projet_1 .p_descr,
+#div_image_projet_2 .p_descr {
   line-height: 25px;
   font-size: 17px;
   color: #666;
@@ -432,29 +440,6 @@ CSS CONTAINER ACCUEIL
 
 #container_actus p#btn_plus_infos {
   float: right;
-}
-
-#presta_web img, #presta_cms img, #presta_flash img {
-  margin-top: 35px;
-}
-
-#presta_web ul, #presta_cms ul, #presta_flash ul {
-  padding-top: 12px;
-  line-height: 20px;
-  font-size: 16px;
-  color: #333;
-}
-
-#presta_cms {
-  width: 285px;
-  margin-left: 45px;
-  float: left;
-}
-
-#presta_flash {
-  width: 285px;
-  float: left;
-  margin-left: 44px;
 }
 
 /*# sourceMappingURL=../../css/home.css.map */
