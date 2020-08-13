@@ -1,42 +1,52 @@
-	<div class="contenair-client">
-				<div id="div_titre_menu">
-					<div class="info-client">
-						Client : <span>France T&eacute;l&eacute;com</span> | Contrat : <span>Alternance</span> | Dipl&ocirc;me : <span>DUT SRC</span> | Date : <span>2009-2010</span>
-					</div>
-						<div id="btn_nav">
-							<a class="projet-prev" id="projet-prev-galerie-client" href="#">
-								<img border="0" src="projets/images/btn-prev.png" width="35" height="42"/>
-							</a>
-							<a class="projet-next" id="projet-next-galerie-client" href="#">
-								<img border="0"  src="projets/images/btn-next.png" width="35" height="42"/>
-								</a>
-							<a href="#" id="retour">
-								<img border="0" src="projets/images/btn-close.png" width="35" height="42"/>
-								</a>
-						</div>
-						<img src="projets/images/barre-separ.png"/>
-						<div id="cont-gauche">
-							<img src="projets/images/galerie/projet-7/logo-orange.png"/>
-							<br/><br/>
-							<p>- D&eacute;veloppement d'applications pour les salari&eacute;s<br/>(Gestions de t&acirc;ches du type Outlook...)</p><p><br/>
-							- D&eacute;veloppement de modules sur l'intranet de France T&eacute;l&eacute;com (Distributions des Tickets Restaurants, Statistiques de travail ...)</p><br/>
-							<p>Il s'agit de projets sur lesquels j'ai contribu&eacute; durant mon alternance chez France T&eacute;l&eacute;com.</p><br/>
-							<p id="my-work-title">J'ai utilis&eacute; ...</p>
-							<ul>
-								<li><span>PHP / MySQL</span></li>
-								<li><span>Notepad++</span></li>
-								<li><span>Wamp Server</span></li>
-							</ul>	
-						</div>
-						
-					
-			<div id="cont-droite">
-				<div id="clientsHolder">
-					<div id="galerie-client">			
-						<img src="projets/images/galerie/projet-7/intranet-ft-1.jpg" width="563" height="392" alt="France Télécom - Intranet - 1" />
-						<img src="projets/images/galerie/projet-7/intranet-ft-2.jpg" width="563" height="392" alt="France Télécom - Intranet - 2" />
-					</div>
+{% block content %}
+{% load static %}
+<div class="contenair-client">
+	<div id="div_titre_menu">
+		<div class="info-client">
+			Client : <span>France Télécom</span> | Contrat : <span>Alternance</span> | Diplôme :
+			<span>DUT SRC</span> | Date : <span>2009-2010</span>
+		</div>
+		<div id="btn_nav">
+			<a class="projet-prev" id="projet-prev-galerie-client" href="#">
+				<img border="0" src="{% static 'webapp/assets/img/projets/btn-prev.png' %}" width="35" height="42" />
+			</a>
+			<a class="projet-next" id="projet-next-galerie-client" href="#">
+				<img border="0" src="{% static 'webapp/assets/img/projets/btn-next.png' %}" width="35" height="42" />
+			</a>
+			<a href="#" id="retour">
+				<img border="0" src="{% static 'webapp/assets/img/projets/btn-close.png' %}" width="35" height="42" />
+			</a>
+		</div>
+		<img src="{% static 'webapp/assets/img/projets/barre-separ.png' %}" />
+		<div id="cont-gauche">
+			<img src="projets/images/galerie/projet-7/logo-orange.png" />
+			<br /><br />
+			<p>- Développement d'applications pour les salariés<br />(Gestions de t&acirc;ches du type
+				Outlook...)</p>
+			<p><br />
+				- Développement de modules sur l'intranet de France Télécom (Distributions des
+				Tickets Restaurants, Statistiques de travail ...)</p><br />
+			<p>Il s'agit de projets sur lesquels j'ai contribué durant mon alternance chez France
+				Télécom.</p><br />
+			<p class="my-work-title">J'ai utilisé ...</p>
+			<ul>
+				<li><span>PHP / MySQL</span></li>
+				<li><span>Notepad++</span></li>
+				<li><span>Wamp Server</span></li>
+			</ul>
+		</div>
+
+
+		<div id="cont-droite">
+			<div id="clientsHolder">
+				<div id="galerie-client">
+					<img src="projets/images/galerie/projet-7/intranet-ft-1.jpg" width="563" height="392"
+						alt="France Télécom - Intranet - 1" />
+					<img src="projets/images/galerie/projet-7/intranet-ft-2.jpg" width="563" height="392"
+						alt="France Télécom - Intranet - 2" />
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+{% endblock %}
