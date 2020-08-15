@@ -89,7 +89,7 @@ $(document).ready(function () {
 
 		$('#contenu-client').css({ 'opacity': '0', 'display': 'none' });
 		$.scrollTo('body', 800, {});
-		$('#thumb-portfolio,#footer-cont').fadeOut("slow", function () {
+		$('#thumb-portfolio,.footer').fadeOut("slow", function () {
 			load_project(id);
 		});
 		return false;
@@ -132,7 +132,7 @@ $(document).ready(function () {
 							$('.pxs_loading').remove();
 							$('<div class="action_js_galerie"><script type="text/javascript" src="' + js_path + '/galerie-client.js"></script></div>').insertAfter($('div#contenu-client .contenair-client'));
 							$('#contenu-client').animate({ opacity: 1 }, 940);
-							$('#thumb-portfolio,#footer-cont').fadeIn("slow");
+							$('#thumb-portfolio,.footer').fadeIn("slow");
 						});
 					}
 
