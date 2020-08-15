@@ -25,6 +25,21 @@ class PortfolioView(BaseView):
     template_name = "webapp/portfolio.html"
     view_name = "Portfolio"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update(
+            {
+                "project_menu": [
+                    {"rel": "sites", "label": "Sites Internet"},
+                    {"rel": "webdesigns", "label": "Webdesign"},
+                    {"rel": "flash", "label": "Flash AS2 / AS3"},
+                    {"rel": "videos-3d", "label": "3D et Vidéo"},
+                ],
+                "project_list": [{}],
+            }
+        )
+        return context
+
 
 class AboutView(BaseView):
     template_name = "webapp/about.html"
@@ -44,8 +59,11 @@ class ProjectView(BaseView):
         return context
 
     def get_context_data(self, **kwargs):
-        return {
-            "project_content_hash": dictor(PROJECTS_CONFIG, self.project_name),
-        }
+
+        context = super().get_context_data(**kwargs)
+        context.update(
+            {"project_content_hash": dictor(PROJECTS_CONFIG, self.project_name),}
+        )
+        return context
 
     view_name = "Project"

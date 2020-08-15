@@ -24,16 +24,16 @@
                 <h1 class="titre_h1">Portfolio</h1>
             </div><br />
 
+            {% if project_menu %}
             <div id="menu_portfolio">
                 <ul class="menu">
                     <li class="selected"><a href="#" rel="all">Tout afficher</a></li>
-                    <li><a href="#" rel="sites">Sites Internet</a></li>
-                    <li><a href="#" rel="webdesigns">Webdesign</a></li>
-
-                    <li><a href="#" rel="flash">Flash AS2 / AS3</a></li>
-                    <li><a href="#" rel="videos-3d">3D et Vidéo</a></li>
+                    {% for menu_hash in project_menu %}
+                    <li><a href="#" rel="{{menu_hash.rel}}">{{menu_hash.label}}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
+            {% endif %}
             <div id="container_thumbs_portfolio">
                 <ul class="item">
                     <li class="item" rel="sites">
