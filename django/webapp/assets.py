@@ -1,5 +1,5 @@
 from dictor import dictor
-from webapp.config import CONFIG
+from webapp.config import ASSETS_CONFIG
 
 
 class Assets:
@@ -9,7 +9,7 @@ class Assets:
     def __init__(self, name):
         """constructor"""
         self.name = name
-        self.config = CONFIG
+        self.config = ASSETS_CONFIG
         self.js_list = self.buildJsList()
         self.css_list = self.buildCssList()
 

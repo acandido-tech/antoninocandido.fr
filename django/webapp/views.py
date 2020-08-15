@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 from webapp.assets import Assets
+from dictor import dictor
+from webapp.config import PROJECTS_CONFIG
 
 
 class BaseView(TemplateView):
@@ -37,7 +39,13 @@ class ContactView(BaseView):
 class ProjectView(BaseView):
     def setup(self, *args, **kwargs):
         context = super().setup(*args, **kwargs)
-        self.template_name = "webapp/projects/{}.html".format(kwargs["project_name"])
+        self.project_name = kwargs["project_name"]
+        self.template_name = "webapp/project_builder.html"
         return context
+
+    def get_context_data(self, **kwargs):
+        return {
+            "project_content_hash": dictor(PROJECTS_CONFIG, self.project_name),
+        }
 
     view_name = "Project"
