@@ -6,8 +6,13 @@
 		{% if project_content_hash.client_info_list %}
 		<div class="info-client">
 			Client :
-			{% for client_info in project_content_hash.client_info_list %}
-			{{client_info|safe}}
+			{% for client_info_hash in project_content_hash.client_info_list %}
+			{% if client_info_hash.name %}
+			| {{client_info_hash.name}} :
+			{% endif %}
+			{% if client_info_hash.value %}
+			<b>{{client_info_hash.value}}</b>
+			{% endif %}
 			{% endfor %}
 
 		</div>

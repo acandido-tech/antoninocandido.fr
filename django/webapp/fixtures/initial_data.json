@@ -35,7 +35,7 @@
         "model": "webapp.projectimage",
         "pk": 1,
         "fields": {
-            "path": "projet-11/logo-apero.png",
+            "path": "projets/galerie/projet-11/logo-apero.png",
             "alt": "",
             "vignette_path": "clients/lapero-net.jpg",
             "vignette_alt": "vignette lapero.net"

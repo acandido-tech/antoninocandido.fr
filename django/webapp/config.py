@@ -29,31 +29,3 @@ ASSETS_CONFIG = {
         "css_list": [],
     },
 }
-
-PROJECTS_CONFIG = {
-    "apero": {
-        "client_info_list": [
-            "<b>IUT SRC de Saint-Raphaël</b>",
-            "| Contrat : <b>Alternance</b>",
-            "| Diplôme : <b>DUT SRC</b>",
-            "| Date : <b>2009</b>",
-        ],
-        "project_img_path": "projets/galerie/projet-11/logo-apero.png",
-        "project_details": [
-            'Maquette de site internet pour le projet "l\'apero.net".',
-            "Il s'agit d'un projet de site internet réalisé dans le cadre de mon DUT SRC.",
-            "Projet actuellement en Stand-by.",
-        ],
-        "project_app": ["Photoshop CS4", "Illustrator CS4"],
-        "project_galerie": [
-            {
-                "path": "projets/galerie/projet-11/lapero-1.jpg",
-                "alt": "l'apéro.net - 1",
-            },
-            {
-                "path": "projets/galerie/projet-11/lapero-2.jpg",
-                "alt": "l'apéro.net - 2",
-            },
-        ],
-    },
-}

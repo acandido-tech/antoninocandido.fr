@@ -10,7 +10,7 @@ urlpatterns = [
     url(r"^about$", webapp.views.AboutView.as_view(), name="about"),
     url(r"^contact$", webapp.views.ContactView.as_view(), name="contact"),
     url(
-        r"^projects/(?P<project_name>[a-z \-]+)/$",
+        r"^projects/(?P<project_id>[0-9]+)/$",
         webapp.views.ProjectView.as_view(),
         name="project",
     ),
