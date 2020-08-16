@@ -42,22 +42,112 @@
         }
     },
     {
+        "model": "webapp.apptype",
+        "pk": 1,
+        "fields": {
+            "app_type_name": "used"
+        }
+    },
+    {
+        "model": "webapp.apptype",
+        "pk": 2,
+        "fields": {
+            "app_type_name": "made"
+        }
+    },
+    {
         "model": "webapp.project",
         "pk": 1,
         "fields": {
             "name": "apero",
             "title": "L'Apero.net",
             "sub_title": "Webdesign",
-            "projecttype": [
-                {
-                    "pk": 2
-                }
-            ],
-            "projectimage": [
-                {
-                    "pk": 1
-                }
-            ]
+            "project_type": 2,
+            "project_image": 1
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 1,
+        "fields": {
+            "path": "projets/galerie/projet-11/lapero-1.jpg",
+            "alt": "l'apéro.net - 1",
+            "project_id": 1
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 2,
+        "fields": {
+            "path": "projets/galerie/projet-11/lapero-2.jpg",
+            "alt": "l'apéro.net - 2",
+            "project_id": 1
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 1,
+        "fields": {
+            "name": "Photoshop CS4",
+            "app_type_id": 1,
+            "project_id": 1
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 2,
+        "fields": {
+            "name": "Illustrator CS4",
+            "app_type_id": 1,
+            "project_id": 1
+        }
+    },
+    {
+        "model": "webapp.projectcontent",
+        "pk": 1,
+        "fields": {
+            "content": "<p>Maquette de site internet pour le projet \"l'apero.net\".<br/>\n<br/ >Il s'agit d'un projet de site internet réalisé dans le cadre de mon DUT SRC.</p><br/>\n<p>Projet actuellement en Stand-by.</p>",
+            "project_id": 1
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 1,
+        "fields": {
+            "name": "",
+            "value": "IUT SRC de Saint-Raphaël",
+            "order": 1,
+            "project_id": 1
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 2,
+        "fields": {
+            "name": "Contrat",
+            "value": "Alternance",
+            "order": 2,
+            "project_id": 1
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 3,
+        "fields": {
+            "name": "Diplôme",
+            "value": "DUT SRC",
+            "order": 3,
+            "project_id": 1
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 4,
+        "fields": {
+            "name": "Date",
+            "value": "2009",
+            "order": 4,
+            "project_id": 1
         }
     }
 ]

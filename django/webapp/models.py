@@ -18,6 +18,10 @@ class ProjectImage(models.Model):
     vignette_alt = models.CharField(max_length=45, default="")
 
 
+class AppType(models.Model):
+    app_type_name = models.CharField(max_length=45)
+
+
 class Project(models.Model):
     name = models.CharField(max_length=45)
     title = models.CharField(max_length=45)
@@ -34,19 +38,18 @@ class Project(models.Model):
 class ProjectClient(models.Model):
     name = models.CharField(max_length=45)
     value = models.CharField(max_length=45)
+    order = models.CharField(max_length=10, default=1)
     project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
 
 
 class ProjectContent(models.Model):
     content = models.CharField(max_length=255)
-    order = models.CharField(max_length=10, default=1)
     project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
 
 
 class ProjectApp(models.Model):
     name = models.CharField(max_length=45)
-    value = models.CharField(max_length=45)
-    context = models.CharField(max_length=10)
+    app_type_id = models.ForeignKey(AppType, on_delete=models.CASCADE, default=1)
     project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
 
 
