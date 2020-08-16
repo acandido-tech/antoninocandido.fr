@@ -38,7 +38,7 @@
                 <ul class="item">
                     {% for project_hash in project_list %}
                     <li class="item" rel="{{project_hash.type}}">
-                        <div class="info_cache {{ forloop.counter0 }}" id="{{project_hash.name}}">
+                        <div class="info_cache {{ forloop.counter0 }}" id="{{project_hash.id}}">
                             <p>
                                 <span>{{project_hash.title}}</span>
                                 <br />{{project_hash.sub_title}}

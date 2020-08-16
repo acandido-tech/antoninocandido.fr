@@ -25,9 +25,7 @@
 			<br /><br />
 			<p>
 				{% if project_content_hash.project_details %}
-				{% for project_details in project_content_hash.project_details %}
-				{{project_details|safe}}<br /><br />
-				{% endfor %}
+				{{project_content_hash.project_details|safe}}
 				{% endif %}
 			</p>
 			{% if project_content_hash.project_made %}

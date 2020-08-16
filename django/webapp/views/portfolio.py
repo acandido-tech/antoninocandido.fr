@@ -33,6 +33,7 @@ class PortfolioView(BaseView):
         for project_hash in Project.objects.all().filter(active=1):
             project_list.append(
                 {
+                    "id": project_hash.id,
                     "name": project_hash.name,
                     "title": project_hash.title,
                     "sub_title": project_hash.sub_title,
