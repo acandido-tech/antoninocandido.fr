@@ -30,5 +30,34 @@
             "name": "videos-3d",
             "label": "3D et Vidéo"
         }
+    },
+    {
+        "model": "webapp.projectimage",
+        "pk": 1,
+        "fields": {
+            "path": "projet-11/logo-apero.png",
+            "alt": "",
+            "vignette_path": "clients/lapero-net.jpg",
+            "vignette_alt": "vignette lapero.net"
+        }
+    },
+    {
+        "model": "webapp.project",
+        "pk": 1,
+        "fields": {
+            "name": "apero",
+            "title": "L'Apero.net",
+            "sub_title": "Webdesign",
+            "projecttype": [
+                {
+                    "pk": 2
+                }
+            ],
+            "projectimage": [
+                {
+                    "pk": 1
+                }
+            ]
+        }
     }
 ]
