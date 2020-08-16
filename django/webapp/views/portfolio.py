@@ -1,4 +1,5 @@
 from .base import BaseView
+from webapp.models import ProjectType
 
 
 class PortfolioView(BaseView):
@@ -12,14 +13,8 @@ class PortfolioView(BaseView):
 
     def build_portfolio_data(self):
         """ Build data to manage portfolio view"""
-        # todo replace by database calls
         return {
-            "project_menu": [
-                {"rel": "sites", "label": "Sites Internet"},
-                {"rel": "webdesigns", "label": "Webdesign"},
-                {"rel": "flash", "label": "Flash AS2 / AS3"},
-                {"rel": "videos-3d", "label": "3D et Vidéo"},
-            ],
+            "project_menu": self.build_portfolio_menu(),
             "project_list": [
                 {
                     "name": "edition-limitee",
@@ -203,3 +198,13 @@ class PortfolioView(BaseView):
                         alt="vignette 3D domaine saint andre" />
                 </li>
     """
+
+    def build_portfolio_menu(self):
+        """ Build data to manage portfolio menu"""
+        menu_list = []
+        for project_type_hash in ProjectType.objects.all():
+            menu_list.append(
+                {"rel": project_type_hash.name, "label": project_type_hash.label}
+            )
+        return menu_list
+

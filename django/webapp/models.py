@@ -5,6 +5,7 @@ from datetime import date
 
 class ProjectType(models.Model):
     name = models.CharField(max_length=45)
+    label = models.CharField(max_length=45, default="")
 
     def __str__(self):
         return self.name
@@ -20,7 +21,7 @@ class Project(models.Model):
     name = models.CharField(max_length=45)
     title = models.CharField(max_length=45)
     sub_title = models.CharField(max_length=45)
-    active = models.SmallIntegerField()
+    active = models.SmallIntegerField(default=1)
     project_type = models.ForeignKey(ProjectType, on_delete=models.CASCADE, default=1)
     project_image = models.ForeignKey(ProjectImage, on_delete=models.CASCADE, default=1)
     created_at = models.DateField(_("Date"), default=date.today)
@@ -37,7 +38,7 @@ class ProjectClient(models.Model):
 
 class ProjectContent(models.Model):
     content = models.CharField(max_length=255)
-    order = models.CharField(max_length=10)
+    order = models.CharField(max_length=10, default=1)
     project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
 
 
