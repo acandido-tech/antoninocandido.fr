@@ -1,0 +1,135 @@
+[
+    {
+        "model": "webapp.projectimage",
+        "pk": 4,
+        "fields": {
+            "path": "projets/galerie/projet-13/logo-bnp.png",
+            "alt": "logo bnp paribas",
+            "vignette_path": "clients/bnp-senegal.jpg",
+            "vignette_alt": "vignette BNP Paribas - senegal"
+        }
+    },
+    {
+        "model": "webapp.project",
+        "pk": 4,
+        "fields": {
+            "name": "bnp-senegal",
+            "title": "BNP Paribas - Sénégal",
+            "sub_title": "Flash",
+            "project_type": 3,
+            "project_image": 4
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 11,
+        "fields": {
+            "path": "projets/galerie/projet-13/bnp-senegal-1.jpg",
+            "alt": "BNP Paribas - Sénégal - 1",
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 12,
+        "fields": {
+            "path": "projets/galerie/projet-13/bnp-senegal-2.jpg",
+            "alt": "BNP Paribas - Sénégal - 2",
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 13,
+        "fields": {
+            "path": "projets/galerie/projet-13/bnp-senegal-3.jpg",
+            "alt": "BNP Paribas - Sénégal - 3",
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 14,
+        "fields": {
+            "name": "Développement AS2",
+            "app_type_id": 2,
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 15,
+        "fields": {
+            "name": "Back-office (Interfaçage Flash - Php - Xml)",
+            "app_type_id": 2,
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 16,
+        "fields": {
+            "name": "Adobe Flash CS4",
+            "app_type_id": 1,
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 17,
+        "fields": {
+            "name": "Notepad++",
+            "app_type_id": 1,
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectcontent",
+        "pk": 4,
+        "fields": {
+            "content": "<p>Application Flash en AS2 dans le cadre d'un challenge qui récompensait les salariés avec un voyage au Sénégal.<br />Il s'agit de projets sur lesquels j'ai contribué durant mon alternance chez BNP Paribas.</p>",
+            "color_setting": "#a8c1ba",
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 11,
+        "fields": {
+            "name": "Client",
+            "value": "BNP Paribas Cardif",
+            "order": 1,
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 12,
+        "fields": {
+            "name": "Contrat",
+            "value": "Alternance",
+            "order": 2,
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 13,
+        "fields": {
+            "name": "Diplôme",
+            "value": "Concepteur Réalisateur Web",
+            "order": 3,
+            "project_id": 4
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 14,
+        "fields": {
+            "name": "Date",
+            "value": "2010-2012",
+            "order": 3,
+            "project_id": 4
+        }
+    }
+]
