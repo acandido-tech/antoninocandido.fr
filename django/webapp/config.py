@@ -15,7 +15,7 @@ ASSETS_CONFIG = {
             "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js",
             "https://cdnjs.cloudflare.com/ajax/libs/coin-slider/1.0.0/coin-slider.min.js",
             static("webapp/js/external/jquery.scrollTo.js"),
-            static("webapp/js/effect.js"),
+            static("webapp/js/portfolio.js"),
         ],
         "css_list": [],
     },
@@ -24,7 +24,7 @@ ASSETS_CONFIG = {
         "js_list": [
             "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js",
             "http://maps.google.com/maps/api/js?sensor=false",
-            static("webapp/js/effect.js"),
+            static("webapp/js/contact.js"),
         ],
         "css_list": [],
     },

@@ -1,28 +1,31 @@
 var couleur = '';
 
 $(document).ready(function () {
-	$('.item li div.info_cache').css("opacity", 0);
-	function reset_thumbs() {
-		$('div.info_cache').removeClass('current');
-		$('div.info_cache').css({ 'opacity': '0', 'cursor': 'pointer' });
-	}
+	var galeriePos = new Array,
+		nbr_images = new Array,
+		idprojet,
+		substr,
+		num_projet,
+		vignettes = $('div.info_cache');
 
-	var galeriePos = new Array;
-	var nbr_images = new Array;
-	galeriePos[0] = new Array();
-	nbr_images[0] = new Array();
+	vignettes.css("opacity", 0);
 
 	$.each($('ul.item img'), function (i, item) {
-		nbr_images[0][i] = $(item).attr('src');
+		nbr_images[i] = $(item).attr('src');
 	});
-
-	var idprojet, substr, num_projet;
-	var vignettes = $('div.info_cache');
 
 	$(vignettes).stop().bind('click', function (e) {
 		e.preventDefault();
 		displayProject(this);
 	});
+
+	/**
+	 * Reset thumbs
+	 */
+	function reset_thumbs() {
+		vignettes.removeClass('current');
+		vignettes.css({ 'opacity': '0', 'cursor': 'pointer' });
+	}
 
 	/**
 	 * 
@@ -38,7 +41,7 @@ $(document).ready(function () {
 		idprojet = $(event).attr("id");
 		num_projet = $(event).attr("class");
 		substr = num_projet.split(' ');
-		galeriePos[0] = substr[1];
+		galeriePos = substr[1];
 
 
 		// j'arrete la fonction si le projet de la vignette cliqué est déjà ouvert
@@ -53,7 +56,7 @@ $(document).ready(function () {
 			$(event).addClass('current');
 
 			$('#contenu-client').animate({ opacity: 0 }, 500, function () {
-				recup_projet(idprojet, 0, galeriePos[0]);
+				recup_projet(idprojet, 0, galeriePos);
 			});
 			return false;
 		}
@@ -64,7 +67,7 @@ $(document).ready(function () {
 		$.scrollTo('body', 800, {});
 		$('.cont1').slideUp("slow", function () {
 			$('.cont2').slideDown("slow");
-			recup_projet(idprojet, 0, galeriePos[0]);
+			recup_projet(idprojet, 0, galeriePos);
 		});
 		$(event).addClass('current');
 		$('.cont1').addClass('open');
@@ -99,16 +102,16 @@ $(document).ready(function () {
 
 		reset_thumbs();
 		if (direction == 'prev')
-			galeriePos[0]--;
+			galeriePos--;
 		else
-			galeriePos[0]++;
-		if (galeriePos[0] == nbr_images[0].length) { galeriePos[0] = 0; }
-		if (galeriePos[0] == -1) { galeriePos[0] = nbr_images[0].length - 1; }
-		//idprojet = $(nbr_images[0][galeriePos[0]]).attr("id");
-		idprojet = $('div.' + galeriePos[0]).attr("id");
+			galeriePos++;
+		if (galeriePos == nbr_images.length) { galeriePos = 0; }
+		if (galeriePos == -1) { galeriePos = nbr_images.length - 1; }
+		//idprojet = $(nbr_images[galeriePos]).attr("id");
+		idprojet = $('div.' + galeriePos).attr("id");
 		$('div#' + idprojet).addClass('current');
 		$('div#' + idprojet).css({ 'opacity': '0.9', 'cursor': 'default' });
-		recup_projet(idprojet, 1, galeriePos[0]);
+		recup_projet(idprojet, 1, galeriePos);
 	};
 
 	/**
@@ -188,85 +191,5 @@ $(document).ready(function () {
 function couleur_fond(id) {
 	var couleurs_fond = ["#a6a6a7", "#68b2e2", "#acba91", "#afc5ce", "#c8c9ca", "#c8c9ca", "#81cdef", "#a8c1ba", "#c8c9ca", "#c8c9ca", "#c8c9ca", "#c8c9ca", "#a8c1ba", "#a8c1ba", "#a8c1ba", "#a8c1ba", "#c8c9ca"];
 	return couleurs_fond[id];
-}
-
-/*
- CODE GOOGLE MAP
-*/
-function initialiser() {
-
-	var styleArray = [
-		{
-			featureType: "road",
-			stylers: [{ hue: "#242831" }, { lightness: 10 }, { saturation: -95 }, { visibility: "simplified" }]
-		}, {
-		},
-		{
-			featureType: "poi",
-			stylers: [{ hue: "#91ff00" }, { visibility: "on" }, { saturation: -45 }]
-		}, {
-		},
-		{
-			featureType: "landscape",
-			stylers: [{ hue: "#242831" }, { lightness: 10 }, { saturation: -95 }, { visibility: "simplified" }]
-		}, {
-		},
-		{
-			elementType: "labels",
-			stylers: [{ hue: "#242831" }, { lightness: 40 }, { saturation: -100 }]
-		}, {
-		}
-	];
-
-	var customMapStyle = new google.maps.StyledMapType(styleArray, { name: "Antonino Candido" });
-
-	var latlng = new google.maps.LatLng(43.350556, 5.604822);
-
-	var options = {
-		center: latlng,
-		zoom: 15,
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		mapTypeControlOptions: {
-			mapTypeIds: ['custom']
-		}
-
-
-	};
-
-	var carte = new google.maps.Map(document.getElementById("carte"), options);
-	carte.mapTypes.set('custom', customMapStyle); //(2)
-	carte.setMapTypeId('custom');
-
-	var styledMapOptions = {
-		name: "Antonino Candido"
-	}
-
-
-
-	/****************Nouveau code****************/
-
-	//création du marqueur
-	var marqueur = new google.maps.Marker({
-		position: new google.maps.LatLng(43.350556, 5.604822),
-		map: carte,
-		icon: "images/marqueur.png"
-
-	});
-
-
-	//var contenuInfoBulle = '<img alt="Antonino Candido Logo" src="candidoLogo.png">';
-	var contenuInfoBulle = '<p style="font-family:Calibri;font-size:16px;color:#333"><strong>Antonino Candido</strong><br/>1, place de l\'h�tel de ville <br/> 13360 Roquevaire</p>';
-	var infoBulle = new google.maps.InfoWindow({
-		content: contenuInfoBulle
-	})
-	/* lier l'infobulle � un marker */
-	google.maps.event.addListener(marqueur, 'click', function () {
-		infoBulle.open(carte, marqueur);
-	});
-	google.maps.event.addListener(carte, 'click', function () {
-		infoBulle.close(carte, marqueur);
-	});
-
-	/********************************************/
 }
 
