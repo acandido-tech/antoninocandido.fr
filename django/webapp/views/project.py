@@ -48,6 +48,7 @@ class ProjectView(BaseView):
                 {"name": project_client_hash.name, "value": project_client_hash.value,}
             )
 
+        print(client_info_list)
         return client_info_list
 
     def _build_container_content(self, project_id):

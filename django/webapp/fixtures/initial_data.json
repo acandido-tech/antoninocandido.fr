@@ -115,7 +115,7 @@
         "model": "webapp.projectclient",
         "pk": 1,
         "fields": {
-            "name": "",
+            "name": "Ecole",
             "value": "IUT SRC de Saint-Raphaël",
             "order": 1,
             "project_id": 1

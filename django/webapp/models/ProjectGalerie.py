@@ -3,6 +3,6 @@ from .Project import Project
 
 
 class ProjectGalerie(models.Model):
-    path = models.CharField(max_length=45)
+    path = models.CharField(max_length=100)
     alt = models.CharField(max_length=45)
     project_id = models.ForeignKey(Project, on_delete=models.CASCADE)
