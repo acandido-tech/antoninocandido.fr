@@ -1,4 +1,5 @@
 from .base import BaseView
+from webapp.config import PROJECT_MADE_KEY, PROJECT_USED_KEY
 from dictor import dictor
 from webapp.models import (
     Project,
@@ -33,8 +34,8 @@ class ProjectView(BaseView):
             "client_info_list": self._build_container_client(project_id),
             "img_path": project_hash.project_image.path,
             "details": self._build_container_content(project_id),
-            "used": container_app_hash["used"],
-            "made": container_app_hash["made"],
+            "used": container_app_hash[PROJECT_USED_KEY],
+            "made": container_app_hash[PROJECT_MADE_KEY],
             "galerie": self._build_container_galerie(project_id),
         }
 
@@ -63,12 +64,14 @@ class ProjectView(BaseView):
     def _build_container_app(self, project_id):
         """ Build data to manage project app section"""
         result_app_hash = {
-            "made": [],
-            "used": [],
+            PROJECT_MADE_KEY: [],
+            PROJECT_USED_KEY: [],
         }
         app_list = ProjectApp.objects.filter(project_id=project_id)
         for app_hash in app_list:
-            result_app_hash[app_hash.app_type_id.app_type_name].append(app_hash.name)
+            type_name = dictor(app_hash, "app_type_id.app_type_name")
+            if type_name in result_app_hash:
+                result_app_hash[type_name].append(app_hash.name)
         return result_app_hash
 
     def _build_container_galerie(self, project_id):

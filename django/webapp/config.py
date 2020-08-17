@@ -29,3 +29,6 @@ ASSETS_CONFIG = {
         "css_list": [],
     },
 }
+
+PROJECT_USED_KEY = "used"
+PROJECT_MADE_KEY = "made"
