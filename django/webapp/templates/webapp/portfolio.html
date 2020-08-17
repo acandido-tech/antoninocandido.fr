@@ -54,4 +54,11 @@
         </div>
     </div>
 </header>
+
+{% if project_settings %}
+<script type="text/javascript">
+    var project_settings = JSON.parse("{{ project_settings|escapejs }}");
+</script>
+{% endif %}
+
 {% endblock %}

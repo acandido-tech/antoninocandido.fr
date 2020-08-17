@@ -107,6 +107,7 @@
         "pk": 1,
         "fields": {
             "content": "<p>Maquette de site internet pour le projet \"l'apero.net\".<br/>\n<br/ >Il s'agit d'un projet de site internet réalisé dans le cadre de mon DUT SRC.</p>\n<p>Projet actuellement en Stand-by.</p>",
+            "color_setting": "#c8c9ca",
             "project_id": 1
         }
     },

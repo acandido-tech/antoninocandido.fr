@@ -1,5 +1,6 @@
 from .base import BaseView
-from webapp.models import Project, ProjectType
+from webapp.models import Project, ProjectType, ProjectContent
+import json
 
 
 class PortfolioView(BaseView):
@@ -13,9 +14,17 @@ class PortfolioView(BaseView):
 
     def build_portfolio_data(self):
         """ Build data to manage portfolio view"""
+
+        project_list = self.build_portfolio_content()
+        color_hash = {}
+        for content_hash in project_list:
+            project_content = ProjectContent.objects.get(project_id=content_hash["id"])
+            color_hash[str(content_hash["id"])] = project_content.color_setting
+
         return {
             "project_menu": self.build_portfolio_menu(),
-            "project_list": self.build_portfolio_content(),
+            "project_list": project_list,
+            "project_settings": json.dumps({"color_hash": color_hash}),
         }
 
     def build_portfolio_menu(self):

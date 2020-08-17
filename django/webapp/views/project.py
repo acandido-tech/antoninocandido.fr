@@ -12,8 +12,9 @@ from webapp.models import (
 class ProjectView(BaseView):
     def setup(self, *args, **kwargs):
         context = super().setup(*args, **kwargs)
-        self.project_id = kwargs["project_id"]
+        self.view_name = "Project"
         self.template_name = "webapp/project_builder.html"
+        self.project_id = kwargs["project_id"]
         return context
 
     def get_context_data(self, **kwargs):
@@ -22,8 +23,6 @@ class ProjectView(BaseView):
             {"project_content_hash": self.build_project_content(self.project_id),}
         )
         return context
-
-    view_name = "Project"
 
     def build_project_content(self, project_id):
         """ Build data to manage project content"""

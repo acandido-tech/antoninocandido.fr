@@ -1,5 +1,3 @@
-var couleur = '';
-
 $(document).ready(function () {
 	var galeriePos = new Array,
 		nbr_images = new Array,
@@ -38,8 +36,8 @@ $(document).ready(function () {
 
 
 		//on récupère la valeur de la propriété id
-		idprojet = $(event).attr("id");
-		num_projet = $(event).attr("class");
+		idprojet = $(event).attr('id');
+		num_projet = $(event).attr("class");;
 		substr = num_projet.split(' ');
 		galeriePos = substr[1];
 
@@ -56,7 +54,7 @@ $(document).ready(function () {
 			$(event).addClass('current');
 
 			$('#contenu-client').animate({ opacity: 0 }, 500, function () {
-				recup_projet(idprojet, 0, galeriePos);
+				recup_projet(idprojet, 0);
 			});
 			return false;
 		}
@@ -67,7 +65,7 @@ $(document).ready(function () {
 		$.scrollTo('body', 800, {});
 		$('.cont1').slideUp("slow", function () {
 			$('.cont2').slideDown("slow");
-			recup_projet(idprojet, 0, galeriePos);
+			recup_projet(idprojet, 0);
 		});
 		$(event).addClass('current');
 		$('.cont1').addClass('open');
@@ -75,17 +73,15 @@ $(document).ready(function () {
 	}
 
 	//function qui récupère l'id de la vignette cliqu� et charge son contenu dans la div cach� 
-	function recup_projet(id, etat, num_projet) {
-		couleur = couleur_fond(num_projet);
+	function recup_projet(project_id, etat) {
 		$('.pxs_container_projekt').css("background", "none");
-		$('.pxs_container_projekt').css("background-color", couleur);
+		$('.pxs_container_projekt').css("background-color", get_project_color(project_id));
 		$('#pxs_container').append('<div class="pxs_loading" id="portfolio">Chargement...</div>');
 		$('.pxs_loading').fadeIn(540);
-		if ($('.action_js_galerie')) { $('#action_js_galerie').remove(); }
 		if (etat == '1') {
 			$('#contenu-client').animate({ opacity: 0 }, 800, function () {
 				$('#contenu-client').css({ 'display': 'none' });
-				load_project(id);
+				load_project(project_id);
 			});
 			return false;
 		}
@@ -93,7 +89,7 @@ $(document).ready(function () {
 		$('#contenu-client').css({ 'opacity': '0', 'display': 'none' });
 		$.scrollTo('body', 800, {});
 		$('#thumb-portfolio,.footer').fadeOut("slow", function () {
-			load_project(id);
+			load_project(project_id);
 		});
 		return false;
 	};
@@ -111,8 +107,20 @@ $(document).ready(function () {
 		idprojet = $('div.' + galeriePos).attr("id");
 		$('div#' + idprojet).addClass('current');
 		$('div#' + idprojet).css({ 'opacity': '0.9', 'cursor': 'default' });
-		recup_projet(idprojet, 1, galeriePos);
+		recup_projet(idprojet, 1);
 	};
+
+	/**
+	 * Get project color values
+	 * @param {*} project_id
+	 */
+	function get_project_color(project_id) {
+		// project_settings - global variable
+		if (typeof project_settings.color_hash[project_id] === "undefined") {
+			return "#c8c9ca"; // default value
+		}
+		return project_settings.color_hash[project_id];
+	}
 
 	/**
 	 * Load project into container
@@ -130,7 +138,14 @@ $(document).ready(function () {
 					nbr_img_projet--;
 					if (nbr_img_projet == 0) {
 						$('.pxs_loading').fadeOut(540, function () {
-							$('.pxs_container_projekt').css("background", couleur + " url(" + image_path + "/projets/background/" + project_id + ".jpg) no-repeat top center");
+							$('.pxs_container_projekt').css(
+								"background",
+								[
+									get_project_color(project_id),
+									"url(" + image_path + "/projets/background/" + project_id + ".jpg)",
+									"no-repeat top center"
+								].join(' ')
+							);
 							$('#contenu-client').css({ 'display': 'block' });
 							$('.pxs_loading').remove();
 							$('<div class="action_js_galerie"><script type="text/javascript" src="' + js_path + '/galerie-client.js"></script></div>').insertAfter($('div#contenu-client .contenair-client'));
@@ -187,9 +202,4 @@ $(document).ready(function () {
 		}
 	});
 });
-
-function couleur_fond(id) {
-	var couleurs_fond = ["#a6a6a7", "#68b2e2", "#acba91", "#afc5ce", "#c8c9ca", "#c8c9ca", "#81cdef", "#a8c1ba", "#c8c9ca", "#c8c9ca", "#c8c9ca", "#c8c9ca", "#a8c1ba", "#a8c1ba", "#a8c1ba", "#a8c1ba", "#c8c9ca"];
-	return couleurs_fond[id];
-}
 
