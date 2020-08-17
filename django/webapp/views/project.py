@@ -1,6 +1,12 @@
 from .base import BaseView
 from dictor import dictor
-from webapp.models import Project, ProjectClient, ProjectContent
+from webapp.models import (
+    Project,
+    ProjectClient,
+    ProjectContent,
+    ProjectApp,
+    ProjectGalerie,
+)
 
 
 class ProjectView(BaseView):
@@ -22,21 +28,14 @@ class ProjectView(BaseView):
     def build_project_content(self, project_id):
         """ Build data to manage project content"""
         project_hash = Project.objects.get(pk=project_id)
+        container_app_hash = self._build_container_app(project_id)
         return {
             "client_info_list": self._build_container_client(project_id),
-            "project_img_path": project_hash.project_image.path,
-            "project_details": self._build_container_content(project_id),
-            "project_app": ["Photoshop CS4", "Illustrator CS4"],
-            "project_galerie": [
-                {
-                    "path": "projets/galerie/projet-11/lapero-1.jpg",
-                    "alt": "l'apéro.net - 1",
-                },
-                {
-                    "path": "projets/galerie/projet-11/lapero-2.jpg",
-                    "alt": "l'apéro.net - 2",
-                },
-            ],
+            "img_path": project_hash.project_image.path,
+            "details": self._build_container_content(project_id),
+            "used": container_app_hash["used"],
+            "made": container_app_hash["made"],
+            "galerie": self._build_container_galerie(project_id),
         }
 
     def _build_container_client(self, project_id):
@@ -60,3 +59,24 @@ class ProjectView(BaseView):
             content_list.append(project_content_hash.content)
 
         return "<br/>".join(content_list)
+
+    def _build_container_app(self, project_id):
+        """ Build data to manage project app section"""
+        result_app_hash = {
+            "made": [],
+            "used": [],
+        }
+        app_list = ProjectApp.objects.filter(project_id=project_id)
+        for app_hash in app_list:
+            result_app_hash[app_hash.app_type_id.app_type_name].append(app_hash.name)
+        return result_app_hash
+
+    def _build_container_galerie(self, project_id):
+        """ Build data to manage project galerie section"""
+        result_list = []
+        galerie_list = ProjectGalerie.objects.filter(project_id=project_id)
+        for galerie_hash in galerie_list:
+            result_list.append(
+                {"path": galerie_hash.path, "alt": galerie_hash.alt,}
+            )
+        return result_list

@@ -19,40 +19,40 @@
 		{% endif %}
 		{% include "webapp/portfolio/nav.html" %}
 		<div id="cont-gauche">
-			{% if project_content_hash.project_img_path %}
-			<img src="{% static 'webapp/assets/img/' %}{{project_content_hash.project_img_path}}" />
+			{% if project_content_hash.img_path %}
+			<img src="{% static 'webapp/assets/img/' %}{{project_content_hash.img_path}}" />
 			{% endif %}
 			<br /><br />
 			<p>
-				{% if project_content_hash.project_details %}
-				{{project_content_hash.project_details|safe}}
+				{% if project_content_hash.details %}
+				{{project_content_hash.details|safe}}
 				{% endif %}
 			</p>
-			{% if project_content_hash.project_made %}
+			{% if project_content_hash.made %}
 			<br />
 			<p class="my-work-title">Ce que j'ai fait ...</p>
 			<ul>
-				{% for project_made in project_content_hash.project_made %}
+				{% for project_made in project_content_hash.made %}
 				<li><span>{{project_made}}</span></li>
 				{% endfor %}
 			</ul>
 			{% endif %}
-			{% if project_content_hash.project_app %}
+			{% if project_content_hash.used %}
 			<br />
 			<p class="my-work-title">J'ai utilisé ...</p>
 			<ul>
-				{% for project_app in project_content_hash.project_app %}
+				{% for project_app in project_content_hash.used %}
 				<li><span>{{project_app}}</span></li>
 				{% endfor %}
 			</ul>
 			{% endif %}
 		</div>
-		{% if project_content_hash.project_galerie %}
+		{% if project_content_hash.galerie %}
 		<div id="cont-droite">
 			<div id="clientsHolder">
 				<div id="galerie-client">
 
-					{% for project_galerie in project_content_hash.project_galerie %}
+					{% for project_galerie in project_content_hash.galerie %}
 					<img src="{% static 'webapp/assets/img/' %}{{project_galerie.path}}" width="563" height="392"
 						alt="{{project_galerie.alt}}" />
 					{% endfor %}
