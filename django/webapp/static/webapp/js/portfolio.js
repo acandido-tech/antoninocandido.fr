@@ -160,14 +160,12 @@ $(document).ready(function () {
 
 	}
 
-	function getAbsolutePath() {
-		var currentURL = window.location.toString().split("/");
-		return currentURL[currentURL.length - 1].split("?");
-	}
-
-	var projetURL = getAbsolutePath();
-	if (projetURL[1]) {
-		$('#' + projetURL[1]).click();
+	// manage pre filtering project from url
+	if (
+		typeof project_settings.filtered_project_id !== "undefined" &&
+		project_settings.filtered_project_id !== false
+	) {
+		$('#' + project_settings.filtered_project_id).click();
 	}
 
 	//SCRIPT ANIMATION VIGNETTE PORTFOLIO

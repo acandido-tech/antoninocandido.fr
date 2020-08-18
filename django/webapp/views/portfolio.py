@@ -24,7 +24,12 @@ class PortfolioView(BaseView):
         return {
             "project_menu": self.build_portfolio_menu(),
             "project_list": project_list,
-            "project_settings": json.dumps({"color_hash": color_hash}),
+            "project_settings": json.dumps(
+                {
+                    "color_hash": color_hash,
+                    "filtered_project_id": self.filtering_by_project(),
+                }
+            ),
         }
 
     def build_portfolio_menu(self):
@@ -54,3 +59,15 @@ class PortfolioView(BaseView):
                 }
             )
         return project_list
+
+    def filtering_by_project(self):
+        """ Filtering portfolio view with a project"""
+        filtered_project_id = False
+        if "getByName" in self.request.GET:
+            project_name = self.request.GET["getByName"]
+            try:
+                return Project.objects.get(name=project_name, active=True).id
+            except Project.DoesNotExist:
+                pass
+        return filtered_project_id
+
