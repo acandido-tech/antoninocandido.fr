@@ -19,7 +19,7 @@ ASSETS_CONFIG = {
         ],
         "css_list": [],
     },
-    "About": {"js_list": [], "css_list": []},
+    "About": {"js_list": [static("webapp/js/about.js"),], "css_list": []},
     "Contact": {
         "js_list": [
             "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js",
