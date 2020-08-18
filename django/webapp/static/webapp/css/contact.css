@@ -1,0 +1,94 @@
+.cont1 {
+  height: 30px;
+  width: 100%;
+  background-color: #242831;
+}
+
+.masthead {
+  padding-top: 5rem;
+  padding-bottom: 0rem;
+}
+
+#container_contact_bg {
+  height: 900px;
+  background-color: #eee;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+}
+
+#container_contact {
+  width: 980px;
+  margin: 0 auto;
+  padding: 35px 0 10px;
+}
+
+#container_contact #div_titre_bouton {
+  display: block;
+  margin: 0 auto;
+  border-bottom: 5px #d6d7cf solid;
+  padding-bottom: 10px;
+}
+
+#div_contact {
+  vertical-align: top;
+}
+
+#div_map {
+  line-height: 24px;
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+  width: 550px;
+  display: inline-block;
+  height: 350px;
+}
+
+#div_text {
+  padding-top: 12px;
+  width: 384px;
+  display: inline-block;
+  height: 350px;
+  vertical-align: top;
+  float: right;
+}
+
+#div_text .title {
+  color: #666;
+  font-size: 2em;
+  font-family: OSPDIN, Verdana, Ariel, sans-serif;
+}
+
+#div_text hr {
+  border: 1px solid #e5e5e5;
+}
+
+#div_text p,
+.mailto {
+  line-height: 19px;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+  font-size: 16px;
+  color: #999;
+}
+
+#div_text p.questions {
+  color: #333;
+}
+
+#carte {
+  position: absolute;
+  width: 343px;
+  height: 458px;
+  margin-top: 63px;
+  margin-left: 83px;
+}
+
+#background_ipad {
+  float: left;
+  width: 470px;
+  height: 593px;
+}
+
+a.mailto:hover {
+  color: #333;
+}
+
+/*# sourceMappingURL=../css/contact.css.map */

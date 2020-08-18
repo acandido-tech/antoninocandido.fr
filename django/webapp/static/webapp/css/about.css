@@ -12,20 +12,13 @@ CSS A PROPOS DE MOI
   padding-bottom: 0rem;
 }
 
-#container_contact_bg {
-  height: 800px;
-  background-color: #eee;
-  Font-family: Calibri, Verdana, Ariel, sans-serif;
-}
-
 #container_a_propos_bg {
   height: 1295px;
   background-color: #eee;
   Font-family: Calibri, Verdana, Ariel, sans-serif;
 }
 
-#container_a_propos,
-#container_contact {
+#container_a_propos {
   width: 980px;
   margin: 0 auto;
   padding: 35px 0 10px;

@@ -77,3 +77,7 @@ function initialiser() {
 
 	/********************************************/
 }
+
+$(document).ready(function () {
+	initialiser();
+});

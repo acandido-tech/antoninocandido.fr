@@ -1,10 +1,50 @@
 {% extends 'webapp/base/common.html' %}
-
 {% block content %}
-    {% load static %}
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-            <h1 class="masthead-heading text-uppercase mb-0">Contact</h1>
+{% load static %}
+<link href="{% static 'webapp/css/contact.css' %}" rel="stylesheet" />
+
+<header class="masthead bg-primary text-white">
+    <div class="cont1"></div>
+    <div id="container_contact_bg">
+        <div id="container_contact">
+
+            <div id="div_titre_bouton">
+                <div id="div_titre">
+                    <h1 class="titre_h1">Contactez moi</h1>
+                </div>
+            </div><br />
+            <div id="div_contact">
+                <div id="div_map">
+                    <div id="carte"></div>
+                    <div id="background_ipad">
+                        <img src="{% static 'webapp/assets/img/ipad.png' %}" alt="ipad - contact" />
+                    </div>
+
+                </div>
+                <div id="div_text">
+                    <p class="questions">
+                        N'hésitez pas à me contacter pour toute question ou demande <br /> de devis, je vous répondrai
+                        dès que possible !<br /><br />
+                    </p>
+                    <hr /><br />
+                    <p>
+                        <span class="title">Adresse </span><br /><br />
+                        <span>1, place de l'hôtel de ville<br />
+                            13360 Roquevaire</span>
+                    </p><br />
+                    <hr /><br />
+                    <p>
+                        <span class="title">Téléphone &amp; Mail
+                        </span><br /><br />
+                        06.66.60.77.72<br />
+                        <a class="mailto" href="mailto:candido.antonino@gmail.com">candido.antonino@gmail.com</a>
+                    </p>
+                </div>
+
+            </div>
         </div>
-    </header>
+    </div>
+
+</header>
+
 {% endblock %}
