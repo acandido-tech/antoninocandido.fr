@@ -1,0 +1,41 @@
+{% block content %}
+{% load static %}
+<div class="contenair-client">
+    <div id="div_titre_menu">
+        <div class="info-client">
+            Client : <span>BNP Paribas Cardif</span> | Contrat : <span>Alternance</span> | Diplôme : <span>Concepteur
+                Réalisateur Web</span> | Date : <span>2010-2012</span>
+        </div>
+        {% include "webapp/portfolio/nav.html" %}
+        <div id="cont-gauche">
+            <img src="{% static 'webapp/assets/img/projets/galerie/projet-15/logo-bnp.png' %}" />
+            <br /><br /><br />
+            <p>Réalisations de banni&egrave;res de différents formats pour BNP Paribas.</p>
+            <p>Création d'une galerie ainsi qu'un script en AS3 qui permet de<br />générer un
+                "brandflag" (cadre blanc & logo dans les banni&egrave;res) en fonction du contenu.</p><br />
+            <p class="my-work-title">Ce que j'ai fait ...</p>
+            <ul>
+                <li><span>Animation - Développement AS3</span></li>
+                <li><span>Création graphique d'apr&egrave;s une charte existante</span></li>
+            </ul>
+            <br /><br />
+            <p class="my-work-title">J'ai utilisé ...</p>
+            <ul>
+                <li><span>Adobe Flash CS4</span></li>
+                <li><span>Adobe Photoshop CS4</span></li>
+                <li><span>Adobe Illustrator CS4</span></li>
+            </ul>
+        </div>
+        <div id="cont-droite">
+            <div id="clientsHolder">
+                <div id="galerie-client">
+                    <img src="{% static 'webapp/assets/img/projets/galerie/projet-15/bnp-bann-1.jpg' %}" width="563"
+                        height="392" alt="BNP Paribas - bannières - 1" />
+                    <img src="{% static 'webapp/assets/img/projets/galerie/projet-15/bnp-bann-2.jpg' %}" width="563"
+                        height="392" alt="BNP Paribas - bannières - 2" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

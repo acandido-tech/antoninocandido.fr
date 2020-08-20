@@ -1,0 +1,461 @@
+@charset "UTF-8";
+/* Slider Style */
+.pxs_container {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background: #c8c9ca url(../assets/img/back.png) no-repeat top center;
+  background-position: top center;
+  border-top: 1px solid #999999;
+}
+
+/* Slider Style */
+.pxs_container_projekt {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #999999;
+}
+
+.pxs_navigation span {
+  width: 100px;
+  height: 515px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  cursor: pointer;
+}
+
+.pxs_navigation span:hover {
+  opacity: 0.2;
+  filter: alpha(opacity=0.2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+}
+
+.pxs_navigation span.pxs_prev {
+  background: #333 url(../assets/img/prev.png) no-repeat center center;
+}
+
+.pxs_navigation span.pxs_next {
+  background: #333 url(../assets/img/next.png) no-repeat center center;
+}
+
+.background-project {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background: url(../assets/img/back.png) no-repeat top center;
+  background-position: top center;
+}
+
+#bg_repeat {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background: url(../assets/img/back_repeat.png) repeat 0 0;
+  background-repeat: repeat;
+}
+
+#bg_ombre {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  background: url(../assets/img/bg_ombre.png) repeat-x 0 0;
+}
+
+.pxs_bg div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 7584px;
+  height: 600px;
+}
+
+.pxs_bg .pxs_bg1 {
+  background-image: url(../assets/img/bg1.png);
+  background-position: top left;
+}
+
+.pxs_bg .pxs_bg2 {
+  background-image: url(../assets/img/bg2.png);
+  background-position: top left;
+}
+
+.pxs_bg .pxs_bg3 {
+  background-image: url(../assets/img/bg3.png);
+  background-position: top left;
+}
+
+.pxs_slider_wrapper {
+  display: none;
+}
+
+.pxs_container ul,
+.pxs_container_projekt ul {
+  margin: 0 auto;
+  padding: 0px;
+  list-style: none;
+}
+
+ul.pxs_slider {
+  position: absolute;
+  left: 0px;
+  height: 600px;
+}
+
+ul.pxs_slider li {
+  height: 600px;
+  float: left;
+  position: relative;
+}
+
+ul.pxs_slider li img {
+  display: block;
+}
+
+.contenu_1 {
+  height: 600px;
+  margin: 0 auto;
+  width: 980px;
+  display: block;
+}
+
+.contenu_1 p {
+  position: absolute;
+}
+
+ul.pxs_thumbnails {
+  height: 85px;
+  position: relative;
+}
+
+ul.pxs_thumbnails li {
+  margin-top: 3px;
+  position: absolute;
+  display: block;
+}
+
+ul.pxs_thumbnails li img {
+  cursor: pointer;
+  display: block;
+  opacity: 0.5;
+  filter: alpha(opacity=0.5);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+ul.pxs_thumbnails li.selected img {
+  opacity: 1.0;
+  filter: alpha(opacity=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.pxs_navigation span {
+  width: 100px;
+  height: 515px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  cursor: pointer;
+}
+
+.pxs_navigation span .pxs_prev {
+  background: #333 url(../assets/img/prev.png) no-repeat center center;
+}
+
+.pxs_navigation span .pxs_next {
+  background: #333 url(../assets/img/next.png) no-repeat center center;
+}
+
+.pxs_navigation span:hover {
+  opacity: 0.2;
+  filter: alpha(opacity=0.2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+}
+
+.pxs_loading {
+  color: #FFF;
+  font-size: 20px;
+  padding: 15px 15px 15px 50px;
+  position: absolute;
+  background: #333 url(../assets/img/ajax-loader.gif) no-repeat 10px 50%;
+  opacity: 0.7;
+  width: 180px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  margin-left: -90px;
+}
+
+#portfolio.pxs_loading {
+  display: none;
+}
+
+#descr_antonino {
+  color: #585858;
+  Font-family: "Impact", Verdana, Ariel, sans-serif;
+}
+
+#descr_antonino span {
+  padding: 0 8px 0 8px;
+  background-color: #242831;
+  color: #FFF;
+}
+
+#descr_antonino_1 {
+  font-size: 32.4px;
+  margin: 217px 0 0 474px;
+}
+
+#descr_antonino_1 span {
+  font-size: 39.76px;
+}
+
+#descr_antonino_2 {
+  font-size: 39px;
+  margin: 280px 0 0 440px;
+}
+
+#descr_antonino_2 span {
+  font-size: 49.42px;
+}
+
+#descr_antonino_3 {
+  font-size: 45px;
+  margin: 356px 0 0 535px;
+}
+
+#btn_accueil_cv a {
+  background: transparent url(../assets/img/btn_slide_1.png) no-repeat 0 0;
+  width: 89px;
+  height: 89px;
+  margin: 58px 0 0 213px;
+  cursor: pointer;
+  display: block;
+}
+
+#btn_accueil_cv a:hover {
+  background-position: 0 -98px;
+}
+
+#btn_accueil_profil a {
+  background: transparent url(../assets/img/btn_slide_1.png) no-repeat 0 0;
+  width: 71px;
+  height: 64px;
+  margin: 294px 0 0 140px;
+  background-position: -128px 0;
+  cursor: pointer;
+  display: block;
+}
+
+#btn_accueil_profil a:hover {
+  background-position: -128px -111px;
+}
+
+/* EDITION LIMITEE CSS */
+#descr_edition_lim {
+  font-size: 18px;
+  color: #000;
+  line-height: 22.1pt;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+  letter-spacing: 1px;
+  padding-top: 110px;
+}
+
+#btn_edition_lim a {
+  margin-top: 308px;
+  background: url(../assets/img/btn_voir_projet.png) transparent no-repeat 0 0;
+  width: 157px;
+  height: 22px;
+  color: #FFF;
+  font-size: 16px;
+  text-decoration: none;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+
+#btn_edition_lim a:hover {
+  color: #ccc;
+  background-position: 0 -33px;
+}
+
+/* FERME DES SONNAILLES CSS */
+#descr_ferme_sonnailles {
+  font-size: 18px;
+  color: #000;
+  line-height: 22.1pt;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+  letter-spacing: 1px;
+  padding-top: 145px;
+}
+
+#btn_ferme_sonnailles a {
+  display: block;
+  margin-top: 348px;
+  background: url(../assets/img/btn_voir_projet.png) transparent no-repeat 0 0;
+  width: 157px;
+  height: 22px;
+  color: #FFF;
+  font-size: 16px;
+  text-decoration: none;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+#btn_ferme_sonnailles a:hover {
+  color: #ccc;
+  background-position: 0 -33px;
+}
+
+/** DOMAINE SAINT ANDR� **/
+#descr_domaine_andre {
+  font-size: 18px;
+  color: #000;
+  line-height: 22.1pt;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+  letter-spacing: 1px;
+  padding-top: 130px;
+}
+
+#btn_domaine_andre a {
+  margin-top: 333px;
+  background: url(../assets/img/btn_voir_projet.png) transparent no-repeat 0 0;
+  width: 157px;
+  height: 22px;
+  color: #FFF;
+  font-size: 16px;
+  text-decoration: none;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+
+#btn_domaine_andre a:hover {
+  color: #ccc;
+  background-position: 0 -33px;
+}
+
+/** AUTRE CSS **/
+#btn_plus_infos a {
+  display: block;
+  background: url(../assets/img/btn_voir_projet.png) transparent no-repeat 0 0;
+  width: 157px;
+  height: 22px;
+  color: #FFF;
+  font-size: 16px;
+  text-decoration: none;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+#btn_plus_infos a:hover {
+  color: #ccc;
+  background-position: 0 -33px;
+}
+
+#navigation {
+  width: 100%;
+  height: 85px;
+  margin-top: 514px;
+  border-top: 1px #FFF solid;
+  background: transparent url(..//assets/img/fond_menu.png) repeat-x top left;
+  position: absolute;
+}
+
+.masthead {
+  padding-top: 5rem;
+  padding-bottom: 0rem;
+}
+
+/*
+
+CSS CONTAINER ACCUEIL
+
+*/
+#container_accueil_bg {
+  background-color: #eeeeee;
+  Font-family: Calibri, Verdana, Ariel, sans-serif;
+}
+
+.text-hover {
+  position: absolute;
+  z-index: 999;
+  width: 249px;
+  height: 144px;
+  border: 3px #acacac solid;
+}
+
+.text-static {
+  width: 249px;
+  height: 144px;
+  border: 3px #acacac solid;
+}
+
+#div_image_projet_1 img.nb,
+#div_image_projet_2 img.nb {
+  border: 3px #acacac solid;
+}
+
+#div_image_projet_1 .p_titre,
+#div_image_projet_2 .p_titre {
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+#div_image_projet_1 .p_descr,
+#div_image_projet_2 .p_descr {
+  line-height: 25px;
+  font-size: 17px;
+  color: #666;
+  font-style: italic;
+}
+
+#div_image_projet_2 {
+  width: 243px;
+  float: left;
+}
+
+#container_actus {
+  width: 357px;
+  float: right;
+  height: 250px;
+}
+
+.div_titre {
+  border-bottom: 5px #d6d7cf solid;
+  margin-bottom: 30px;
+}
+
+.div_sub_title {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  margin: -43px 0 0 -35px;
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+#container_actus .p_actus {
+  line-height: 28px;
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+}
+
+#container_actus p#btn_plus_infos {
+  float: right;
+}
+
+/*# sourceMappingURL=../../css/home.css.map */

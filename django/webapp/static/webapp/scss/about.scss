@@ -1,0 +1,120 @@
+/*
+CSS A PROPOS DE MOI
+*/
+
+.cont1 {
+    height: 30px;
+    width: 100%;
+    background-color: #242831;
+}
+
+.masthead {
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+}
+
+#container_a_propos_bg {
+    height: 1295px;
+    background-color: #eee;
+    Font-family: Calibri, Verdana, Ariel, sans-serif;
+}
+
+#container_a_propos {
+    width: 980px;
+    margin: 0 auto;
+    padding: 35px 0 10px
+}
+
+#container_a_propos #div_titre_bouton {
+    display: block;
+    margin: 0 auto;
+    border-bottom: 5px #d6d7cf solid;
+    padding-bottom: 10px;
+    height: 45px;
+    box-sizing: unset;
+}
+
+#div_titre {
+    width: 550px;
+    float: left
+}
+
+#div_bouton {
+    float: right;
+    width: 150px;
+    margin-right: 8px
+}
+
+
+#content {
+    vertical-align: top;
+}
+
+#div_presentation {
+    padding-top: 12px;
+    line-height: 24px;
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+    width: 550px;
+    display: inline-block;
+    height: 350px;
+    margin: 10px auto;
+}
+
+#div_presentation ul {
+    width: 500px;
+    margin: 0;
+    padding-top: 12px;
+    line-height: 28px;
+}
+
+#photo_a_propos {
+    padding-top: 12px;
+    width: 384px;
+    display: inline-block;
+    height: 350px;
+    vertical-align: top;
+    float: right;
+}
+
+
+#btn_cv a {
+    display: block;
+    background: url(../assets/img/btn_voir_projet.png) transparent no-repeat 0 0;
+    width: 157px;
+    height: 22px;
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center
+}
+
+#btn_cv a:hover {
+    color: #ccc;
+    background-position: 0 -33px;
+}
+
+#clients_logo {
+    margin: 0 auto;
+    padding: 45px 0 10px;
+    width: 980px;
+}
+
+.contenair_logo {
+    float: left;
+    width: 245px;
+    height: 167px;
+}
+
+.contenair_logo div {
+    width: 202px;
+    height: 135px;
+    background-color: #ddd;
+    border: 2px #c0c0c0 solid;
+    margin: 0 auto;
+}
+
+.logo-couleurs {
+    position: absolute;
+}

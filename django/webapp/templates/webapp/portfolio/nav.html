@@ -1,0 +1,15 @@
+{% block content %}
+{% load static %}
+<div id="btn_nav">
+    <a class="projet-prev" id="projet-prev-galerie-client" href="#">
+        <img border="0" src="{% static 'webapp/assets/img/projets/btn-prev.png' %}" width="35" height="42" />
+    </a>
+    <a class="projet-next" id="projet-next-galerie-client" href="#">
+        <img border="0" src="{% static 'webapp/assets/img/projets/btn-next.png' %}" width="35" height="42" />
+    </a>
+    <a href="#" id="retour">
+        <img border="0" src="{% static 'webapp/assets/img/projets/btn-close.png' %}" width="35" height="42" />
+    </a>
+</div>
+<img src="{% static 'webapp/assets/img/projets/barre-separ.png' %}" />
+{% endblock %}

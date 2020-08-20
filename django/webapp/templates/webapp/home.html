@@ -1,0 +1,111 @@
+{% extends 'webapp/base/common.html' %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/home.css' %}" rel="stylesheet" />
+
+<!-- Masthead-->
+<header class="masthead bg-primary text-white">
+    <!-- Parallax view-->
+    {% include 'webapp/home/parallaxSlider.html' %}
+
+</header>
+<!-- Contact Section-->
+<section id="container_accueil_bg" class="page-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="div_titre">
+                    <h1 class="titre_h1">Derniers projets</h1>
+                </div>
+                <div class="row">
+                    <div id="div_image_projet_1" class="col-lg-6 col-sm-12">
+                        <div id="hov-1" class="text-hover">
+                            <img src="{% static 'webapp/assets/img/img-projet-1.jpg' %}" border="0"
+                                alt="interfaces smartphone bnp paribas" width="243" height="138" />
+                        </div>
+                        <div class="text-static">
+                            <img src="{% static 'webapp/assets/img/img-projet-1-nb.jpg' %}" width="243" height="138"
+                                alt="interfaces smartphone bnp paribas NB" />
+                        </div>
+                        <p class="p_titre">BNP Paribas</p>
+                        <p class="p_descr">Interfaces pour Android, ipad et table de surface</p>
+                    </div>
+                    <div id="div_image_projet_2" class="col-lg-6 col-sm-12">
+                        <div id="hov-2" class="text-hover">
+                            <img src="{% static 'webapp/assets/img/img-projet-2.jpg' %}" border="0"
+                                alt="charte graphique wiki bnp paribas" width="243" height="138" />
+                        </div>
+                        <div class="text-static">
+                            <img src="{% static 'webapp/assets/img/img-projet-2-nb.jpg' %}" width="243" height="138"
+                                alt="charte graphique wiki bnp paribas NB" />
+                        </div>
+                        <p class="p_titre">BNP Paribas</p>
+                        <p class="p_descr">Charte graphique d'un Wiki Intégration Html/css</p>
+                    </div>
+                </div>
+            </div>
+            <div id="container_actus" class="col-lg-4 col-md-12">
+                <div class="div_titre">
+                    <h1 class="titre_h1">Actualités</h1>
+                </div>
+                <p class="p_actus">Je travaille en tant que Tech Lead chez <b><a href="http://voyageprive.com/"
+                            target="_blank">voyageprive.com</a></b>, depuis Mars 2017</p>
+                <br>
+                <b><u>
+                        <center>je ne suis pas à l'écoute du marché.</center>
+                    </u></b>
+
+                <br /><br />
+                <p id="btn_plus_infos">
+                    <a href="{% url 'about' %}">En savoir plus</a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <div class="div_titre">
+                            <h1 class="titre_h1">Prestations</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 text-center text-lg-left">
+                        <img src="{% static 'webapp/assets/img/presta_web.png' %}" width="300" height="170"
+                            alt="picto prestations web" />
+                        <div class="div_sub_title">Sites internet</div>
+                        <ul>
+                            <li>Intégration Html/Css</li>
+                            <li>Ergonomie, Webdesign</li>
+                            <li>Solution e-commerce</li>
+                            <li>Suivi et Référencement</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-center text-lg-left">
+                        <img src="{% static 'webapp/assets/img/presta_cms.png' %}" width="300" height="170"
+                            alt="picto prestations module et cms" />
+                        <div class="div_sub_title">Modules et CMS</div>
+                        <ul>
+                            <li>Applications web</li>
+                            <li>Solutions CMS</li>
+                            <li>Composants JOOMLA</li>
+                            <li>Scripts Jquery et Mootools</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-12 text-center text-lg-left">
+                        <img src="{% static 'webapp/assets/img/presta_flash.png' %}" width="300" height="170"
+                            alt="picto prestations flash" />
+                        <div class="div_sub_title">Animations Flash</div>
+                        <ul>
+                            <li>Bannières, Bandeau</li>
+                            <li>Applications en AS3</li>
+                            <li>Interfaçage Flash - Php - Xml</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

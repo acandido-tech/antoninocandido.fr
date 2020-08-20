@@ -1,0 +1,145 @@
+{% extends 'webapp/base/common.html' %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/about.css' %}" rel="stylesheet" />
+
+<header class="masthead bg-primary text-white">
+    <div class="cont1"></div>
+    <div id="container_a_propos_bg">
+        <div id="container_a_propos">
+
+            <div id="div_titre_bouton">
+                <div id="div_titre">
+                    <h1 class="titre_h1">{{"à propos de moi"|capfirst}}</h1>
+                </div>
+                <div id="div_bouton"><br />
+                    <p id="btn_cv">
+                        <a href="{% static 'webapp/assets/img/projets/cv-antonino-candido.pdf' %}"
+                            target="_blank">Consulter mon
+                            cv</a>
+                    </p>
+                </div>
+            </div><br />
+            <div id="content">
+                <div id="div_presentation">
+                    Je travaille en tant que Tech Lead chez <b>voyage-prive.com</b>, depuis Mars 2017.<br><br>
+
+                    Polyvalent, autonome, tout en m'intégrant parfaitement à une équipe, je suis passionné par tout
+                    ce qui touche au monde du web, que ce soit dans <strong>le domaine du webdesign ou du développement
+                        d'applications.</strong><br /><br />
+
+                    Les projets que j'ai menés à bien m'ont permis de développer mes compétences au sein
+                    <strong>d'entreprises de premier plan</strong> (France Télécom, BNP Paribas, Crédit Agricole,
+                    Mairie de Gap...)<br />
+                    <br />
+                    Aujourd'hui, mon expérience s'étend également à différents domaines tels que :<br />
+
+                    <ul>
+                        <li>Le développement en PHP orienté objet (Symfony 1.4, Phalcon, CodeIgniter)</li>
+                        <li>Environnement Linux / Windows - Versionning "GitHub" - Méthode Agile</li>
+                        <li>JavaScript orienté objet (library Jquery)</li>
+                        <li>Webdesign et Intégration HTML5/CSS3</li>
+                        <li>Responsive Design - Formation "Intégration en Responsive Design"</li>
+                        <li>Les CMS du type Joomla, Wordpress</li>
+                    </ul>
+                </div>
+                <div id="photo_a_propos">
+                    <img src="{% static 'webapp/assets/img/photo-profil.jpg' %}" alt="photo-antonino" />
+                </div>
+
+            </div>
+        </div>
+        <div id="clients_logo">
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/bnp-paribas-color.png' %}"
+                        alt="logo bnp paribas" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/bnp-paribas.png' %}"
+                        alt="logo bnp paribas" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/france-telecom-color.png' %}"
+                        alt="logo france télécom" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/france-telecom.png' %}"
+                        alt="logo france télécom" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/orange-color.png' %}" alt="logo orange" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/orange.png' %}" alt="logo orange" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/internet-cmwa-color.png' %}"
+                        alt="logo internet-cmwa" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/internet-cmwa.png' %}"
+                        alt="logo internet-cmwa" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/mairie-de-gap-color.png' %}"
+                        alt="logo mairie-de-gap" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/mairie-de-gap.png' %}"
+                        alt="logo mairie-de-gap" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/etsi-color.png' %}" alt="logo etsi" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/etsi.png' %}" alt="logo etsi" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/vox-company-color.png' %}"
+                        alt="logo vox-company" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/vox-company.png' %}"
+                        alt="logo vox-company" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/kior-management-color.png' %}"
+                        alt="logo kior-management" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/kior-management.png' %}"
+                        alt="logo kior-management" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/sonnailles-color.png' %}"
+                        alt="logo sonnailles" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/sonnailles.png' %}"
+                        alt="logo sonnailles" />
+                </div>
+            </div>
+            <div class="contenair_logo">
+                <div>
+                    <img class="logo-couleurs" border="0"
+                        src="{% static 'webapp/assets/img/clients/logos/services-a-la-personne-color.png' %}"
+                        alt="logo services-a-la-personne" />
+                    <img border="0" src="{% static 'webapp/assets/img/clients/logos/services-a-la-personne.png' %}"
+                        alt="logo services-a-la-personne" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+{% endblock %}

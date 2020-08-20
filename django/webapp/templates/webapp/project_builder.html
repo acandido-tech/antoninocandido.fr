@@ -1,0 +1,66 @@
+{% block content %}
+{% load static %}
+{% if project_content_hash %}
+<div class="contenair-client">
+	<div id="div_titre_menu">
+		{% if project_content_hash.client_info_list %}
+		<div class="info-client">
+			{% for client_info_hash in project_content_hash.client_info_list %}
+			{% if client_info_hash.name %}
+			{% if forloop.counter0 > 0 %} | {% endif %}
+			{{client_info_hash.name}} :
+			{% endif %}
+			{% if client_info_hash.value %}
+			<b>{{client_info_hash.value}}</b>
+			{% endif %}
+			{% endfor %}
+
+		</div>
+		{% endif %}
+		{% include "webapp/portfolio/nav.html" %}
+		<div id="cont-gauche">
+			{% if project_content_hash.img_path %}
+			<img src="{% static 'webapp/assets/img/' %}{{project_content_hash.img_path}}" />
+			{% endif %}
+			<br />
+			<p>
+				{% if project_content_hash.details %}
+				{{project_content_hash.details|safe}}
+				{% endif %}
+			</p>
+			{% if project_content_hash.made %}
+			<br />
+			<p class="my-work-title">Ce que j'ai fait ...</p>
+			<ul>
+				{% for project_made in project_content_hash.made %}
+				<li><span>{{project_made}}</span></li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+			{% if project_content_hash.used %}
+			<br />
+			<p class="my-work-title">J'ai utilisé ...</p>
+			<ul>
+				{% for project_app in project_content_hash.used %}
+				<li><span>{{project_app}}</span></li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+		</div>
+		{% if project_content_hash.galerie %}
+		<div id="cont-droite">
+			<div id="clientsHolder">
+				<div id="galerie-client">
+
+					{% for project_galerie in project_content_hash.galerie %}
+					<img src="{% static 'webapp/assets/img/' %}{{project_galerie.path}}" width="563" height="392"
+						alt="{{project_galerie.alt}}" />
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endif %}
+{% endblock %}

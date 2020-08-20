@@ -1,0 +1,161 @@
+[
+    {
+        "model": "webapp.projectimage",
+        "pk": 2,
+        "fields": {
+            "path": "projets/galerie/projet-1/logo-edition-limitee.png",
+            "alt": "logo edition limitee",
+            "vignette_path": "clients/edition-limitee.jpg",
+            "vignette_alt": "vignette edition limitee"
+        }
+    },
+    {
+        "model": "webapp.project",
+        "pk": 2,
+        "fields": {
+            "name": "edition-limitee",
+            "title": "EDITION-LIMITEE",
+            "sub_title": "Site E-commerce",
+            "project_type": 1,
+            "project_image": 2
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 3,
+        "fields": {
+            "path": "projets/galerie/projet-1/edition-limitee-1.jpg",
+            "alt": "Edition-limitee-marque de luxe - 1",
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 4,
+        "fields": {
+            "path": "projets/galerie/projet-1/edition-limitee-2.jpg",
+            "alt": "Edition-limitee-marque de luxe - 2",
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 5,
+        "fields": {
+            "path": "projets/galerie/projet-1/edition-limitee-3.jpg",
+            "alt": "Edition-limitee-marque de luxe - 3",
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 6,
+        "fields": {
+            "path": "projets/galerie/projet-1/edition-limitee-4.jpg",
+            "alt": "Edition-limitee-marque de luxe - 4",
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 7,
+        "fields": {
+            "path": "projets/galerie/projet-1/edition-limitee-5.jpg",
+            "alt": "Edition-limitee-marque de luxe - 5",
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 3,
+        "fields": {
+            "name": "Webdesign & Intégration",
+            "app_type_id": 2,
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 4,
+        "fields": {
+            "name": "CMS Joomla & Virtuemart (Boutique en ligne)",
+            "app_type_id": 2,
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 5,
+        "fields": {
+            "name": "Animations flash",
+            "app_type_id": 2,
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 6,
+        "fields": {
+            "name": "Mise en place du Blog (Wordpress)",
+            "app_type_id": 2,
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 7,
+        "fields": {
+            "name": "Maintenance du site",
+            "app_type_id": 2,
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 8,
+        "fields": {
+            "name": "Développement de modules en PHP sous Joomla",
+            "app_type_id": 2,
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectcontent",
+        "pk": 2,
+        "fields": {
+            "content": "<p>Site E-commerce et blog de la marque de luxe \"Edition limitee\".<br />Il s'agit d'un projet réalisé en tant qu'auto-entrepreneur avec l'agence Internet-cmwa.</p>",
+            "color_setting": "#a6a6a7",
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 5,
+        "fields": {
+            "name": "Client",
+            "value": "Edition Limitee",
+            "order": 1,
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 6,
+        "fields": {
+            "name": "Agence",
+            "value": "Internet-cmwa",
+            "order": 2,
+            "project_id": 2
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 7,
+        "fields": {
+            "name": "Date",
+            "value": "2010",
+            "order": 3,
+            "project_id": 2
+        }
+    }
+]

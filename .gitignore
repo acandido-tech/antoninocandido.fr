@@ -1,0 +1,7 @@
+__pycache__/
+.DS_Store
+.idea/
+.history/
+.vscode/
+django/.env.sh
+

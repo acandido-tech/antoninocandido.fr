@@ -1,0 +1,112 @@
+{% load static %}
+<div id="pxs_container" class="pxs_container">
+    <div id="bg_repeat">
+        <div id="bg_ombre"></div>
+        <div class="pxs_bg">
+            <div class="pxs_bg1"></div>
+            <div class="pxs_bg2"></div>
+            <div class="pxs_bg3"></div>
+            <div class="pxs_bg4"></div>
+        </div>
+        <div class="pxs_loading">Chargement ...</div>
+
+        <div class="pxs_slider_wrapper">
+            <ul class="pxs_slider">
+                <li>
+                    <div class="contenu_1">
+                        <span id="descr_antonino">
+                            <p id="descr_antonino_1">Je suis &nbsp; <span>développeur</span><br /></p>
+                            <p id="descr_antonino_2"><span>informatique</span> &nbsp;passionné par<br /></p>
+                            <p id="descr_antonino_3">l'univers du&nbsp; <span>web</span></p>
+                        </span>
+
+                        <p id="btn_accueil_profil">
+                            <a href="{% url 'about' %}">&nbsp;</a>
+                        </p>
+                        <p id="btn_accueil_cv">
+                            <a href="{% static 'webapp/projets/cv-antonino-candido.pdf' %}" target="_blank"></a>
+                        </p>
+
+
+                        <img src="{% static 'webapp/assets/img/candido_antonino.png' %}"
+                            alt="antonino candido image slider" />
+                    </div>
+                </li>
+
+                <li>
+                    <div class="contenu_1">
+                        <p id="descr_edition_lim">Créée en 1999, ce n'est que depuis cette <br />
+                            année que la marque de maroquinerie lance<br />
+                            son tout premier produit : "le Shocking Bag"
+                            <br /><br />
+                            Voila un produit innovant mais aussi <br />
+                            excessif et choquant.</p>
+
+                        <p id="btn_edition_lim"><a href="{% url 'portfolio' %}?getByName=edition-limitee">
+                                Voir le projet
+                            </a>
+                        </p>
+
+                        <img src="{% static 'webapp/assets/img/edition-limitee.png' %}"
+                            alt="EDITION LIMITEE image slider" />
+                    </div>
+                </li>
+                <li>
+                    <div class="contenu_1">
+                        <p id="descr_ferme_sonnailles">Situé dans un petit village de montagne, <br />
+                            c'est en 1870 que voit le jour cette<br />
+                            exploitation familiale, spécialisée dans<br />
+                            "la vente d'agneau et d'huile d'olives"
+                            <br /><br />
+                            Une gamme de produits de qualité !</p>
+
+                        <p id="btn_ferme_sonnailles"><a href="{% url 'portfolio' %}?getByName=ferme-des-sonnailles">
+                                Voir le projet
+                            </a>
+                        </p>
+                        <img src="{% static 'webapp/assets/img/ferme_sonnailles.png' %}"
+                            alt="La ferme des Sonnailles image slider" />
+                    </div>
+                </li>
+
+                <li>
+                    <div class="contenu_1">
+                        <p id="descr_domaine_andre">
+                            Spécialisée depuis 1992 dans la vente<br />
+                            de fruits et l'élaboration de produits viticoles<br />
+                            issu des Hautes-Alpes.
+                            <br /><br />
+                            Engagé en Agriculture Biologique<br />
+                            et certifié AB par Ecocert !
+                        </p>
+
+                        <p id="btn_domaine_andre">
+                            <a href="{% url 'portfolio' %}?getByName=domaine-saint-andree">
+                                Voir le projet
+                            </a>
+                        </p>
+                        <img src="{% static 'webapp/assets/img/domaine_andre.png' %}" alt="Domaine saint andré" />
+                    </div>
+                </li>
+            </ul>
+
+            <div class="pxs_navigation">
+                <span class="pxs_next"></span>
+                <span class="pxs_prev"></span>
+            </div>
+
+            <div id="navigation">
+                <ul class="pxs_thumbnails">
+                    <li><img src="{% static 'webapp/assets/img/thumbs/1.png' %}"
+                            alt="Antonino Candido - Développeur Multimédia" /></li>
+                    <li><img src="{% static 'webapp/assets/img/thumbs/2.png' %}" alt="Edition Limitee - E-commerce" />
+                    </li>
+                    <li><img src="{% static 'webapp/assets/img/thumbs/3.png' %}"
+                            alt="La ferme des Sonnailles - Site vitrine" /></li>
+                    <li><img src="{% static 'webapp/assets/img/thumbs/4.png' %}"
+                            alt="Domaine Saint-André - E-commerce" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

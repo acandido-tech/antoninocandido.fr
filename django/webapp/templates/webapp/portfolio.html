@@ -1,0 +1,64 @@
+{% extends 'webapp/base/common.html' %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/portfolio.css' %}" rel="stylesheet" />
+
+<header class="masthead bg-primary text-white">
+    <div class="cont1"></div>
+    <div class="cont2">
+
+        <div id="pxs_container" class="pxs_container_projekt">
+            <div class="background-project">
+                <div id="bg_repeat">
+                    <div id="contenu-client"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="thumb-portfolio">
+        <div id="container_portfolio_bg">
+
+            <div id="div_titre_portfolio">
+                <h1 class="titre_h1">Portfolio</h1>
+            </div><br />
+
+            {% if project_menu %}
+            <div id="menu_portfolio">
+                <ul class="menu">
+                    <li class="selected"><a href="#" rel="all">Tout afficher</a></li>
+                    {% for menu_hash in project_menu %}
+                    <li><a href="#" rel="{{menu_hash.rel}}">{{menu_hash.label}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if project_list %}
+            <div id="container_thumbs_portfolio">
+                <ul class="item">
+                    {% for project_hash in project_list %}
+                    <li class="item" rel="{{project_hash.type}}">
+                        <div class="info_cache {{ forloop.counter0 }}" id="{{project_hash.id}}">
+                            <p>
+                                <span>{{project_hash.title}}</span>
+                                <br />{{project_hash.sub_title}}
+                            </p>
+                        </div>
+                        <img src="{% static 'webapp/assets/img/' %}{{project_hash.img_hash.path}}"
+                            alt="{{project_hash.img_hash.alt}}" />
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+{% if project_settings %}
+<script type="text/javascript">
+    var project_settings = JSON.parse("{{ project_settings|escapejs }}");
+</script>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,134 @@
+[
+    {
+        "model": "webapp.projectimage",
+        "pk": 3,
+        "fields": {
+            "path": "projets/galerie/projet-2/logo-ferme-sonnailles.png",
+            "alt": "logo ferme des sonnailles",
+            "vignette_path": "clients/sonnailles.jpg",
+            "vignette_alt": "vignette ferme des sonnailles"
+        }
+    },
+    {
+        "model": "webapp.project",
+        "pk": 3,
+        "fields": {
+            "name": "ferme-des-sonnailles",
+            "title": "Ferme des Sonnailles",
+            "sub_title": "Site Vitrine",
+            "project_type": 1,
+            "project_image": 3
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 8,
+        "fields": {
+            "path": "projets/galerie/projet-2/ferme-sonnailles-1.jpg",
+            "alt": "La ferme des Sonnailles - 1",
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 9,
+        "fields": {
+            "path": "projets/galerie/projet-2/ferme-sonnailles-2.jpg",
+            "alt": "La ferme des Sonnailles - 2",
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectgalerie",
+        "pk": 10,
+        "fields": {
+            "path": "projets/galerie/projet-2/ferme-sonnailles-3.jpg",
+            "alt": "La ferme des Sonnailles - 3",
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 9,
+        "fields": {
+            "name": "Webdesign & Intégration",
+            "app_type_id": 2,
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 10,
+        "fields": {
+            "name": "CMS Joomla",
+            "app_type_id": 2,
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 11,
+        "fields": {
+            "name": "Création de la page Facebook",
+            "app_type_id": 2,
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 12,
+        "fields": {
+            "name": "Maintenance du site",
+            "app_type_id": 2,
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectapp",
+        "pk": 13,
+        "fields": {
+            "name": "Développement de modules en PHP sous Joomla",
+            "app_type_id": 2,
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectcontent",
+        "pk": 3,
+        "fields": {
+            "content": "<p>Site vitrine pour l'entreprise \"la Ferme des Sonnailles\".<br />Il s'agit d'un projet réalisé en tant qu'auto-entrepreneur et dans le cadre de mon projet de fin d'année durant ma licence.<br/>Présentation du projet prévu pour février 2012.</p>",
+            "color_setting": "#68b2e2",
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 8,
+        "fields": {
+            "name": "Client",
+            "value": "La ferme des Sonnailles",
+            "order": 1,
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 9,
+        "fields": {
+            "name": "Agence",
+            "value": "Internet-cmwa",
+            "order": 2,
+            "project_id": 3
+        }
+    },
+    {
+        "model": "webapp.projectclient",
+        "pk": 10,
+        "fields": {
+            "name": "Date",
+            "value": "2011",
+            "order": 3,
+            "project_id": 3
+        }
+    }
+]
