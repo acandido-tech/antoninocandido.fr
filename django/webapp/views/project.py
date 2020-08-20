@@ -20,7 +20,11 @@ class ProjectView(BaseView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context.update(
-            {"project_content_hash": self.build_project_content(self.project_id),}
+            {
+                "project_content_hash": self.build_project_content(
+                    self.project_id
+                ),
+            }
         )
         return context
 
@@ -45,7 +49,10 @@ class ProjectView(BaseView):
         ).order_by("order")
         for project_client_hash in project_client_list:
             client_info_list.append(
-                {"name": project_client_hash.name, "value": project_client_hash.value,}
+                {
+                    "name": project_client_hash.name,
+                    "value": project_client_hash.value,
+                }
             )
 
         print(client_info_list)
@@ -54,7 +61,9 @@ class ProjectView(BaseView):
     def _build_container_content(self, project_id):
         """ Build data to manage project content section"""
         content_list = []
-        project_content_list = ProjectContent.objects.filter(project_id=project_id)
+        project_content_list = ProjectContent.objects.filter(
+            project_id=project_id
+        )
         for project_content_hash in project_content_list:
             content_list.append(project_content_hash.content)
 
@@ -76,7 +85,9 @@ class ProjectView(BaseView):
     def _build_container_galerie(self, project_id):
         """ Build data to manage project galerie section"""
         result_list = []
-        for galerie_hash in ProjectGalerie.objects.filter(project_id=project_id):
+        for galerie_hash in ProjectGalerie.objects.filter(
+            project_id=project_id
+        ):
             result_list.append(
                 {"path": galerie_hash.path, "alt": galerie_hash.alt,}
             )

@@ -6,7 +6,9 @@ import webapp.views
 
 urlpatterns = [
     url(r"^$", webapp.views.HomeView.as_view(), name="home"),
-    url(r"^portfolio$", webapp.views.PortfolioView.as_view(), name="portfolio"),
+    url(
+        r"^portfolio$", webapp.views.PortfolioView.as_view(), name="portfolio",
+    ),
     url(r"^about$", webapp.views.AboutView.as_view(), name="about"),
     url(r"^contact$", webapp.views.ContactView.as_view(), name="contact"),
     url(
@@ -19,5 +21,6 @@ urlpatterns = [
 if settings.DEBUG:
     import debug_toolbar
 
-    urlpatterns = [url(r"^__debug__/", include(debug_toolbar.urls)),] + urlpatterns
-
+    urlpatterns = [
+        url(r"^__debug__/", include(debug_toolbar.urls)),
+    ] + urlpatterns

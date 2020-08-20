@@ -10,8 +10,12 @@ class Project(models.Model):
     title = models.CharField(max_length=45)
     sub_title = models.CharField(max_length=45)
     active = models.SmallIntegerField(default=1)
-    project_type = models.ForeignKey(ProjectType, on_delete=models.CASCADE, default=1)
-    project_image = models.ForeignKey(ProjectImage, on_delete=models.CASCADE, default=1)
+    project_type = models.ForeignKey(
+        ProjectType, on_delete=models.CASCADE, default=1
+    )
+    project_image = models.ForeignKey(
+        ProjectImage, on_delete=models.CASCADE, default=1
+    )
     created_at = models.DateField(_("Date"), default=date.today)
 
     def __str__(self):

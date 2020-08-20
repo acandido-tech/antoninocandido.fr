@@ -18,7 +18,9 @@ class PortfolioView(BaseView):
         project_list = self.build_portfolio_content()
         color_hash = {}
         for content_hash in project_list:
-            project_content = ProjectContent.objects.get(project_id=content_hash["id"])
+            project_content = ProjectContent.objects.get(
+                project_id=content_hash["id"]
+            )
             color_hash[str(content_hash["id"])] = project_content.color_setting
 
         return {
@@ -37,7 +39,10 @@ class PortfolioView(BaseView):
         menu_list = []
         for project_type_hash in ProjectType.objects.all():
             menu_list.append(
-                {"rel": project_type_hash.name, "label": project_type_hash.label}
+                {
+                    "rel": project_type_hash.name,
+                    "label": project_type_hash.label,
+                }
             )
         return menu_list
 
@@ -70,4 +75,3 @@ class PortfolioView(BaseView):
             except Project.DoesNotExist:
                 pass
         return filtered_project_id
-
