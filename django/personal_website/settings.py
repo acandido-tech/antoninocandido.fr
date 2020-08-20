@@ -1,13 +1,12 @@
 import os
-from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = config("PERSONAL_WEBSITE_KEY")
+SECRET_KEY = os.environ.get("PERSONAL_WEBSITE_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("IS_DEBUG")
+DEBUG = False if os.environ.get("ENV") == "PRODUCTION" else True
 
 ALLOWED_HOSTS = []
 
@@ -64,10 +63,10 @@ WSGI_APPLICATION = "personal_website.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("DB_NAME"),
-        "USER": config("DB_USER"),
-        "PASSWORD": config("DB_PWD"),
-        "HOST": config("DB_HOST"),
+        "NAME": os.environ.get("DB_NAME"),
+        "USER": os.environ.get("DB_USER"),
+        "PASSWORD": os.environ.get("DB_PWD"),
+        "HOST": os.environ.get("DB_HOST"),
         "PORT": "5432",
     }
 }

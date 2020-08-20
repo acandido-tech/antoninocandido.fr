@@ -3,5 +3,5 @@ __pycache__/
 .idea/
 .history/
 .vscode/
-django/.env
+django/.env.sh
 
