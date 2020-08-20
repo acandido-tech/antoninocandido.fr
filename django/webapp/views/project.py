@@ -55,7 +55,6 @@ class ProjectView(BaseView):
                 }
             )
 
-        print(client_info_list)
         return client_info_list
 
     def _build_container_content(self, project_id):
