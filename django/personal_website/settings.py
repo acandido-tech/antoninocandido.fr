@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,8 +9,21 @@ SECRET_KEY = os.environ.get("PERSONAL_WEBSITE_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False if os.environ.get("ENV") == "PRODUCTION" else True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["djangoacandido.heroku.com", "127.0.0.1"]
 
+if os.environ.get("ENV") == "PRODUCTION":
+
+    # Static files settings
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, "staticfiles")
+
+    # Extra places for collectstatic to find static files.
+    STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, "static"),)
+
+    STATICFILES_STORAGE = (
+        "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    )
 
 # Application definition
 
@@ -34,6 +48,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "personal_website.urls"
@@ -70,6 +85,11 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+
+if os.environ.get("ENV") == "PRODUCTION":
+
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES["default"].update(db_from_env)
 
 
 # Password validation
