@@ -11,22 +11,6 @@ DEBUG = False if os.environ.get("ENV") == "PRODUCTION" else True
 
 ALLOWED_HOSTS = ["djangoacandido.heroku.com", "127.0.0.1"]
 
-
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-print(os.environ.get("ENV"))
-
-
 if os.environ.get("ENV") == "PRODUCTION":
 
     # Static files settings
