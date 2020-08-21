@@ -7,9 +7,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("PERSONAL_WEBSITE_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False if os.environ.get("ENV") == "PRODUCTION" else True
-
-ALLOWED_HOSTS = ["djangoacandido.heroku.com", "127.0.0.1"]
+# DEBUG = False if os.environ.get("ENV") == "PRODUCTION" else True
+DEBUG = True
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "webapp.apps.WebappConfig",
