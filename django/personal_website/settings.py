@@ -25,6 +25,7 @@ if os.environ.get("ENV") == "PRODUCTION":
         "whitenoise.storage.CompressedManifestStaticFilesStorage"
     )
 
+
 # Application definition
 
 INSTALLED_APPS = [
