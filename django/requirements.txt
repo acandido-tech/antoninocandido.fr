@@ -5,7 +5,7 @@ black==19.10b0
 click==7.1.2
 dictor==0.1.7
 dj-database-url==0.5.0
-Django==3.0.8
+Django==3.1.13
 django-debug-toolbar==2.2
 django-sass==1.0.0
 flake8==3.8.3
